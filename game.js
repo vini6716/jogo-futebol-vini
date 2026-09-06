@@ -20,11 +20,17 @@ function clamp(v,min,max){
 
 const FORMACAO=[
     {role:"GK",  x:70,  y:300, numero:1},
-    {role:"DEF", x:220, y:180, numero:2},
-    {role:"DEF", x:220, y:420, numero:3},
-    {role:"MEI", x:420, y:180, numero:4},
-    {role:"MEI", x:420, y:420, numero:5},
-    {role:"ATA", x:600, y:300, numero:9}
+    {role:"DEF", x:180, y:110, numero:2},
+    {role:"DEF", x:180, y:250, numero:3},
+    {role:"DEF", x:180, y:350, numero:4},
+    {role:"DEF", x:180, y:490, numero:5},
+    {role:"MEI", x:380, y:110, numero:6},
+    {role:"MEI", x:380, y:250, numero:7},
+    {role:"MEI", x:380, y:350, numero:8},
+    {role:"MEI", x:380, y:490, numero:9},
+    {role:"ATA", x:580, y:200, numero:10},
+    {role:"ATA", x:580, y:300, numero:11},
+    {role:"ATA", x:580, y:400, numero:12}
 ];
 
 const VELOCIDADE_POR_FUNCAO={GK:2.2, DEF:2.6, MEI:2.8, ATA:3.0};
@@ -53,7 +59,7 @@ function criarJogador(time,x,y,numero,role){
         x, y,
         xFormacao:x, yFormacao:y,
         vx:0, vy:0,
-        raio:16,
+        raio:14,
         numero,
         role,
         velocidadeBase:VELOCIDADE_POR_FUNCAO[role],
@@ -70,6 +76,16 @@ function criarTimes(){
     FORMACAO.forEach(f=>{
         jogadores.push(criarJogador("visitante", 1000-f.x, f.y, f.numero, f.role));
     });
+}
+
+function atacanteCentral(time){
+    let melhor=null, menorDist=Infinity;
+    jogadores.forEach(j=>{
+        if(j.time!==time || j.role!=="ATA") return;
+        const d=Math.abs(j.yFormacao-300);
+        if(d<menorDist){menorDist=d; melhor=j;}
+    });
+    return melhor;
 }
 
 function jogadorMaisProximo(time, alvo, ignorar, semGoleiro){
@@ -116,19 +132,38 @@ function desenharCampo(){
 
 function desenharJogador(j){
 
+    // sombra
     ctx.beginPath();
-    ctx.arc(j.x,j.y,j.raio,0,Math.PI*2);
+    ctx.ellipse(j.x, j.y+j.raio*0.75, j.raio*0.9, j.raio*0.35, 0, 0, Math.PI*2);
+    ctx.fillStyle="rgba(0,0,0,0.25)";
+    ctx.fill();
+
+    // corpo (camisa)
+    ctx.beginPath();
+    ctx.arc(j.x, j.y, j.raio, 0, Math.PI*2);
     ctx.fillStyle = j.time==="casa" ? "#1565c0" : "#d32f2f";
     ctx.fill();
     ctx.lineWidth=2;
     ctx.strokeStyle="white";
     ctx.stroke();
 
+    // numero na camisa
     ctx.fillStyle="white";
-    ctx.font="bold 12px Arial";
+    ctx.font="bold 10px Arial";
     ctx.textAlign="center";
     ctx.textBaseline="middle";
-    ctx.fillText(j.numero, j.x, j.y);
+    ctx.fillText(j.numero, j.x, j.y+j.raio*0.35);
+
+    // cabeça (aponta na direção que o jogador está virado)
+    const cabecaX = j.x + j.direcaoX*j.raio*0.55;
+    const cabecaY = j.y + j.direcaoY*j.raio*0.55 - j.raio*0.15;
+    ctx.beginPath();
+    ctx.arc(cabecaX, cabecaY, j.raio*0.48, 0, Math.PI*2);
+    ctx.fillStyle="#f0bf94";
+    ctx.fill();
+    ctx.lineWidth=1;
+    ctx.strokeStyle="#8a5a2b";
+    ctx.stroke();
 
 }
 
@@ -488,9 +523,9 @@ function reiniciarPosicoes(timeDoKickoff){
     });
     bola.x=500; bola.y=300; bola.vx=0; bola.vy=0;
     semDonoCooldown=0;
-    controlado = jogadores.find(j=>j.time==="casa" && j.role==="ATA");
+    controlado = atacanteCentral("casa");
 
-    const atacante = jogadores.find(j=>j.time===timeDoKickoff && j.role==="ATA");
+    const atacante = atacanteCentral(timeDoKickoff);
     atacante.x = timeDoKickoff==="casa" ? 480 : 520;
     atacante.y = 300;
     posse = atacante;
