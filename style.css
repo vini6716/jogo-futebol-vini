@@ -48,6 +48,8 @@ body{
     border-radius:50%;
     background:#ffffff55;
     position:relative;
+    touch-action:none;
+    user-select:none;
 }
 
 #stick{
@@ -74,4 +76,5 @@ button{
     background:#1565c0;
     color:white;
     font-weight:bold;
+    cursor:pointer;
 }
