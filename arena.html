@@ -92,9 +92,41 @@
       font-size: 1rem;
     }
     [hidden] { display: none !important; }
+
+    .rotate-overlay {
+      position: fixed; inset: 0; z-index: 50;
+      background: #04170c;
+      display: none;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 2rem;
+    }
+    .rotate-overlay .icon {
+      font-size: 3.5rem;
+      display: block;
+      margin-bottom: 1rem;
+      animation: rotate-hint 1.6s ease-in-out infinite;
+    }
+    .rotate-overlay p {
+      color: #b9c9bd; font-size: 1rem; max-width: 280px; margin: 0 auto;
+    }
+    @keyframes rotate-hint {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(90deg); }
+    }
+    @media (orientation: portrait) and (max-width: 900px) {
+      .rotate-overlay { display: flex; }
+      #stage { visibility: hidden; }
+    }
   </style>
 </head>
 <body>
+  <div class="rotate-overlay" id="rotate-overlay">
+    <div>
+      <span class="icon">📱</span>
+      <p>Gire seu celular na horizontal pra jogar. O campo fica bem melhor assim!</p>
+    </div>
+  </div>
+
   <div id="stage">
     <canvas id="canvas"></canvas>
 
