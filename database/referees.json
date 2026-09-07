@@ -22,5 +22,41 @@
     "name": "Luana Beckert",
     "country": "Brasil",
     "strictness": "Moderado"
+  },
+  {
+    "id": 5,
+    "name": "Michael Oliver",
+    "country": "Inglaterra",
+    "strictness": "Rigoroso"
+  },
+  {
+    "id": 6,
+    "name": "Clément Turpin",
+    "country": "França",
+    "strictness": "Moderado"
+  },
+  {
+    "id": 7,
+    "name": "Daniele Orsato",
+    "country": "Itália",
+    "strictness": "Rigoroso"
+  },
+  {
+    "id": 8,
+    "name": "Felix Zwayer",
+    "country": "Alemanha",
+    "strictness": "Moderado"
+  },
+  {
+    "id": 9,
+    "name": "Jesús Gil Manzano",
+    "country": "Espanha",
+    "strictness": "Tolerante"
+  },
+  {
+    "id": 10,
+    "name": "Fábio Veríssimo",
+    "country": "Portugal",
+    "strictness": "Moderado"
   }
 ]

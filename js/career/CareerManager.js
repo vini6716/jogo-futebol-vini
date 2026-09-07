@@ -1,7 +1,7 @@
 /**
  * Porta web do CareerManager.cs / SaveCareer.cs: gera o calendário de uma
- * temporada (turno e returno contra os outros clubes do banco de dados),
- * simula rodadas e mantém a tabela de classificação.
+ * temporada (turno e returno contra os demais clubes da mesma liga do clube
+ * escolhido), simula rodadas e mantém a tabela de classificação.
  */
 import { MatchManager } from "../match/MatchManager.js";
 
@@ -47,7 +47,8 @@ export class CareerManager {
   }
 
   startNewCareer(userClubId, managerName) {
-    const league = this.database.getLeagueByName("Campeonato Brasileiro Série A");
+    const userClub = this.database.getClub(userClubId);
+    const league = userClub && userClub.leagueId != null ? this.database.getLeague(userClub.leagueId) : null;
     let clubIds = league ? [...league.clubIds] : this.database.getClubs().map((c) => c.id);
     if (!clubIds.includes(userClubId)) clubIds.push(userClubId);
 
@@ -60,6 +61,7 @@ export class CareerManager {
     this.state = {
       managerName,
       userClubId,
+      leagueName: league ? league.name : "Liga Livre",
       clubIds,
       season: 1,
       round: 0,
@@ -187,7 +189,7 @@ export class CareerManager {
       season: this.state.season,
       position,
       champion,
-      competition: "Campeonato Brasileiro Série A",
+      competition: this.state.leagueName || "Liga Livre",
     });
     if (champion) this.state.money += 2000000;
     this.state.money += 300000;

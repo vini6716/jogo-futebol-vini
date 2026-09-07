@@ -13,38 +13,314 @@
   },
   {
     "id": 3,
+    "name": "Uruguai",
+    "continent": "América do Sul",
+    "fifa": true
+  },
+  {
+    "id": 4,
+    "name": "Colômbia",
+    "continent": "América do Sul",
+    "fifa": true
+  },
+  {
+    "id": 5,
+    "name": "Equador",
+    "continent": "América do Sul",
+    "fifa": true
+  },
+  {
+    "id": 6,
+    "name": "Paraguai",
+    "continent": "América do Sul",
+    "fifa": true
+  },
+  {
+    "id": 7,
+    "name": "Chile",
+    "continent": "América do Sul",
+    "fifa": true
+  },
+  {
+    "id": 8,
+    "name": "Venezuela",
+    "continent": "América do Sul",
+    "fifa": true
+  },
+  {
+    "id": 9,
     "name": "Espanha",
     "continent": "Europa",
     "fifa": true
   },
   {
-    "id": 4,
+    "id": 10,
     "name": "Inglaterra",
     "continent": "Europa",
     "fifa": true
   },
   {
-    "id": 5,
+    "id": 11,
+    "name": "Escócia",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 12,
+    "name": "País de Gales",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 13,
+    "name": "Irlanda",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 14,
     "name": "Alemanha",
     "continent": "Europa",
     "fifa": true
   },
   {
-    "id": 6,
+    "id": 15,
     "name": "França",
     "continent": "Europa",
     "fifa": true
   },
   {
-    "id": 7,
+    "id": 16,
     "name": "Itália",
     "continent": "Europa",
     "fifa": true
   },
   {
-    "id": 8,
+    "id": 17,
     "name": "Portugal",
     "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 18,
+    "name": "Holanda",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 19,
+    "name": "Bélgica",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 20,
+    "name": "Croácia",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 21,
+    "name": "Sérvia",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 22,
+    "name": "Polônia",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 23,
+    "name": "Áustria",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 24,
+    "name": "Suíça",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 25,
+    "name": "Dinamarca",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 26,
+    "name": "Suécia",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 27,
+    "name": "Noruega",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 28,
+    "name": "Ucrânia",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 29,
+    "name": "Turquia",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 30,
+    "name": "Hungria",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 31,
+    "name": "Eslovênia",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 32,
+    "name": "Geórgia",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 33,
+    "name": "Marrocos",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 34,
+    "name": "Senegal",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 35,
+    "name": "Nigéria",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 36,
+    "name": "Gana",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 37,
+    "name": "Egito",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 38,
+    "name": "Argélia",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 39,
+    "name": "Tunísia",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 40,
+    "name": "Costa do Marfim",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 41,
+    "name": "Camarões",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 42,
+    "name": "Mali",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 43,
+    "name": "República Democrática do Congo",
+    "continent": "África",
+    "fifa": true
+  },
+  {
+    "id": 44,
+    "name": "Estados Unidos",
+    "continent": "América do Norte",
+    "fifa": true
+  },
+  {
+    "id": 45,
+    "name": "México",
+    "continent": "América do Norte",
+    "fifa": true
+  },
+  {
+    "id": 46,
+    "name": "Canadá",
+    "continent": "América do Norte",
+    "fifa": true
+  },
+  {
+    "id": 47,
+    "name": "Costa Rica",
+    "continent": "América do Norte",
+    "fifa": true
+  },
+  {
+    "id": 48,
+    "name": "Jamaica",
+    "continent": "América do Norte",
+    "fifa": true
+  },
+  {
+    "id": 49,
+    "name": "Japão",
+    "continent": "Ásia",
+    "fifa": true
+  },
+  {
+    "id": 50,
+    "name": "Coreia do Sul",
+    "continent": "Ásia",
+    "fifa": true
+  },
+  {
+    "id": 51,
+    "name": "Austrália",
+    "continent": "Oceania",
+    "fifa": true
+  },
+  {
+    "id": 52,
+    "name": "Catar",
+    "continent": "Ásia",
+    "fifa": true
+  },
+  {
+    "id": 53,
+    "name": "Arábia Saudita",
+    "continent": "Ásia",
+    "fifa": true
+  },
+  {
+    "id": 54,
+    "name": "Irã",
+    "continent": "Ásia",
     "fifa": true
   }
 ]
