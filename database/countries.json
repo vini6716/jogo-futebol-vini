@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Brasil",
+    "continent": "América do Sul",
+    "fifa": true
+  },
+  {
+    "id": 2,
+    "name": "Argentina",
+    "continent": "América do Sul",
+    "fifa": true
+  },
+  {
+    "id": 3,
+    "name": "Espanha",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 4,
+    "name": "Inglaterra",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 5,
+    "name": "Alemanha",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 6,
+    "name": "França",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 7,
+    "name": "Itália",
+    "continent": "Europa",
+    "fifa": true
+  },
+  {
+    "id": 8,
+    "name": "Portugal",
+    "continent": "Europa",
+    "fifa": true
+  }
+]

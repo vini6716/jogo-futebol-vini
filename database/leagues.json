@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Campeonato Brasileiro Série A",
+    "country": "Brasil",
+    "division": 1,
+    "clubIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  }
+]

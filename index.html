@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Futebol Land</title>
+  <meta name="description" content="Futebol Land — crie seu clube, jogue partidas e viva uma carreira no futebol, direto do navegador." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== SPLASH ===================== -->
+  <section id="screen-splash" class="screen active">
+    <div class="splash-wrap">
+      <div class="splash-stage stage-logo">FUTEBOL LAND</div>
+      <button id="splash-skip" class="btn-link">Pular ▶</button>
+    </div>
+  </section>
+
+  <!-- ===================== MAIN MENU ===================== -->
+  <section id="screen-main-menu" class="screen">
+    <div class="menu-wrap">
+      <h1 class="game-title">FUTEBOL LAND</h1>
+      <p class="game-subtitle">Aperte START para jogar</p>
+      <nav class="menu-list">
+        <button id="menu-career" class="menu-btn">Modo Carreira</button>
+        <button id="menu-create-club" class="menu-btn">Crie seu Clube</button>
+        <button id="menu-quick-match" class="menu-btn">Jogo Rápido</button>
+        <button id="menu-online" class="menu-btn">Online</button>
+        <button id="menu-tournaments" class="menu-btn">Torneios</button>
+        <button id="menu-training" class="menu-btn">Treino</button>
+        <button id="menu-settings" class="menu-btn">Configurações</button>
+        <button id="menu-credits" class="menu-btn">Créditos</button>
+        <button id="menu-exit" class="menu-btn menu-btn-quiet">Sair</button>
+      </nav>
+      <p id="menu-exit-note" class="menu-exit-note" hidden>Obrigado por jogar Futebol Land! Você pode fechar esta aba quando quiser. ⚽</p>
+    </div>
+  </section>
+
+  <!-- ===================== QUICK MATCH ===================== -->
+  <section id="screen-quick-match" class="screen">
+    <div class="screen-wrap">
+      <header class="screen-header">
+        <h2>Jogo Rápido</h2>
+      </header>
+
+      <div class="qm-setup">
+        <div class="qm-picker">
+          <div class="qm-team-picker">
+            <div id="qm-home-preview" class="team-preview"></div>
+            <label for="qm-home">Time da Casa</label>
+            <select id="qm-home"></select>
+          </div>
+          <div class="qm-vs">×</div>
+          <div class="qm-team-picker">
+            <div id="qm-away-preview" class="team-preview"></div>
+            <label for="qm-away">Time Visitante</label>
+            <select id="qm-away"></select>
+          </div>
+        </div>
+        <div class="screen-actions">
+          <button id="qm-start" class="btn-primary">Apitar Início ⚽</button>
+          <button id="qm-back-setup" class="btn-secondary">Voltar</button>
+        </div>
+      </div>
+
+      <div class="qm-live" hidden>
+        <div class="scoreboard">
+          <div class="scoreboard-team">
+            <span id="qm-name-home">—</span>
+            <span id="qm-score-home">0</span>
+          </div>
+          <div id="qm-clock" class="scoreboard-clock">0'</div>
+          <div class="scoreboard-team">
+            <span id="qm-score-away">0</span>
+            <span id="qm-name-away">—</span>
+          </div>
+        </div>
+        <div id="qm-log" class="match-log"></div>
+        <div class="screen-actions">
+          <button id="qm-speed" class="btn-secondary">Velocidade x1</button>
+          <button id="qm-skip" class="btn-secondary">Pular para o fim</button>
+          <button id="qm-rematch" class="btn-primary" hidden>Nova Partida</button>
+          <button id="qm-back-live" class="btn-secondary">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CREATE CLUB ===================== -->
+  <section id="screen-create-club" class="screen">
+    <div class="screen-wrap">
+      <header class="screen-header">
+        <h2>Crie seu Clube</h2>
+      </header>
+
+      <form id="create-club-form" class="cc-grid">
+        <div class="cc-fields">
+          <label>Nome do clube
+            <input id="cc-name" type="text" maxlength="30" required placeholder="Ex: Vini FC" />
+          </label>
+          <label>Cidade
+            <input id="cc-city" type="text" maxlength="24" placeholder="Ex: Nova Esperança" />
+          </label>
+          <label>País
+            <select id="cc-country"></select>
+          </label>
+          <label>Estádio
+            <input id="cc-stadium" type="text" maxlength="30" placeholder="Ex: Arena Vini" />
+          </label>
+          <div class="cc-colors">
+            <label>Cor primária <input id="cc-primary" type="color" value="#1b5e20" /></label>
+            <label>Cor secundária <input id="cc-secondary" type="color" value="#ffd600" /></label>
+          </div>
+          <label>Escudo
+            <div id="cc-emblem-picker" class="emblem-picker"></div>
+          </label>
+          <label>Força do elenco: <span id="cc-strength-label">70</span>
+            <input id="cc-strength" type="range" min="45" max="90" value="70" />
+          </label>
+          <div class="screen-actions">
+            <button type="submit" class="btn-primary">Fundar Clube</button>
+            <button type="button" id="cc-back" class="btn-secondary">Voltar</button>
+          </div>
+        </div>
+        <div class="cc-preview-col">
+          <div id="cc-preview" class="team-preview big"></div>
+          <p class="muted">Pré-visualização do escudo</p>
+        </div>
+      </form>
+
+      <h3>Meus Clubes</h3>
+      <div id="cc-list" class="club-list"></div>
+    </div>
+  </section>
+
+  <!-- ===================== CAREER ===================== -->
+  <section id="screen-career" class="screen">
+    <div class="screen-wrap">
+      <header class="screen-header">
+        <h2>Modo Carreira</h2>
+      </header>
+
+      <div class="career-setup">
+        <label>Escolha seu clube
+          <select id="career-club"></select>
+        </label>
+        <label>Nome do técnico
+          <input id="career-manager-name" type="text" maxlength="24" placeholder="Seu nome" />
+        </label>
+        <div class="screen-actions">
+          <button id="career-start" class="btn-primary">Começar Carreira</button>
+          <button id="career-back-setup" class="btn-secondary">Voltar</button>
+        </div>
+      </div>
+
+      <div class="career-dashboard" hidden>
+        <div id="career-club-header" class="career-club-header"></div>
+        <p id="career-season-info" class="career-info"></p>
+        <p id="career-money-info" class="career-info"></p>
+        <p id="career-fixture-info" class="career-info career-fixture"></p>
+        <div class="screen-actions">
+          <button id="career-play-round" class="btn-primary">Jogar Rodada</button>
+          <button id="career-new" class="btn-secondary">Nova Carreira</button>
+          <button id="career-back-dashboard" class="btn-secondary">Voltar ao Menu</button>
+        </div>
+
+        <h3>Classificação</h3>
+        <div class="table-scroll">
+          <table class="standings-table">
+            <thead>
+              <tr><th>#</th><th>Clube</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th><th>Pts</th></tr>
+            </thead>
+            <tbody id="career-standings-body"></tbody>
+          </table>
+        </div>
+
+        <div class="career-columns">
+          <div>
+            <h3>Últimas rodadas</h3>
+            <div id="career-history" class="career-history"></div>
+          </div>
+          <div>
+            <h3>Taças</h3>
+            <div id="career-trophies" class="career-trophies"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="career-match" hidden>
+        <div class="scoreboard">
+          <div class="scoreboard-team">
+            <span id="career-name-home">—</span>
+            <span id="career-score-home">0</span>
+          </div>
+          <div id="career-clock" class="scoreboard-clock">0'</div>
+          <div class="scoreboard-team">
+            <span id="career-score-away">0</span>
+            <span id="career-name-away">—</span>
+          </div>
+        </div>
+        <div id="career-log" class="match-log"></div>
+        <div class="screen-actions">
+          <button id="career-match-skip" class="btn-secondary">Pular para o fim</button>
+          <button id="career-match-continue" class="btn-primary" hidden>Continuar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ONLINE (stub) ===================== -->
+  <section id="screen-online" class="screen">
+    <div class="screen-wrap stub-screen">
+      <header class="screen-header"><h2>Online</h2></header>
+      <p>🌐 O modo online (partidas contra outros jogadores, clubes online, ranking e temporadas) está planejado no design original do FutebolLand, mas depende de um servidor multiplayer que este site ainda não tem.</p>
+      <p class="muted">Estruturas previstas: Matchmaking, FriendSystem, ClubOnline, ChatSystem, RankingSystem, SeasonSystem, TournamentSystem, AntiCheat.</p>
+      <div class="screen-actions">
+        <button class="btn-secondary back-to-menu">Voltar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TOURNAMENTS (stub) ===================== -->
+  <section id="screen-tournaments" class="screen">
+    <div class="screen-wrap stub-screen">
+      <header class="screen-header"><h2>Torneios</h2></header>
+      <p>🏆 Em breve: dispute a <strong>Copa Futebol Land</strong> em chaveamento eliminatório entre todos os clubes do banco de dados (incluindo os que você criar).</p>
+      <div class="screen-actions">
+        <button class="btn-secondary back-to-menu">Voltar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRAINING (stub) ===================== -->
+  <section id="screen-training" class="screen">
+    <div class="screen-wrap stub-screen">
+      <header class="screen-header"><h2>Treino</h2></header>
+      <p>🏃 Em breve: sessões de treino para evoluir os atributos dos seus jogadores (ritmo, finalização, passe, drible, defesa e físico) entre as rodadas da Carreira.</p>
+      <div class="screen-actions">
+        <button class="btn-secondary back-to-menu">Voltar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SETTINGS ===================== -->
+  <section id="screen-settings" class="screen">
+    <div class="screen-wrap">
+      <header class="screen-header"><h2>Configurações</h2></header>
+
+      <label class="setting-row">Volume da música: <span id="set-music-label">70%</span>
+        <input id="set-music" type="range" min="0" max="100" value="70" />
+      </label>
+      <label class="setting-row">Volume dos efeitos: <span id="set-sfx-label">80%</span>
+        <input id="set-sfx" type="range" min="0" max="100" value="80" />
+      </label>
+
+      <p class="setting-row">Dificuldade</p>
+      <div id="set-difficulty-ladder" class="difficulty-ladder"></div>
+
+      <div class="screen-actions">
+        <button id="set-back" class="btn-primary">Voltar</button>
+        <button id="set-reset" class="btn-secondary danger">Apagar todos os dados salvos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CREDITS ===================== -->
+  <section id="screen-credits" class="screen">
+    <div class="screen-wrap stub-screen">
+      <header class="screen-header"><h2>Créditos</h2></header>
+      <p><strong>Futebol Land</strong> — versão site, adaptada da estrutura original do projeto em Unity.</p>
+      <ul class="credits-list">
+        <li>Design &amp; Concept — Vini</li>
+        <li>Engenharia do site &amp; simulação de partidas — Claude</li>
+        <li>Menu, Carreira, Criação de Clube, Jogo Rápido, Banco de Dados</li>
+      </ul>
+      <p class="muted">Estrutura original: Assets, Scripts (Menu, Career, OpenWorld, Clubs, Players, Match, Online, Save), Scenes e Database, mantidos como referência de arquitetura para esta versão web.</p>
+      <div class="screen-actions">
+        <button class="btn-secondary back-to-menu">Voltar</button>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
