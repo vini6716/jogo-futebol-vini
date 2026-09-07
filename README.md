@@ -37,10 +37,11 @@ inteira em qualquer hospedagem estática (GitHub Pages, Netlify, Vercel).
     clube escolhido (ou, pra clubes sem liga — como os criados em "Crie seu
     Clube" — a liguinha **Mundo Livre**), com tabela de classificação.
   - **Copas** (mata-mata, com chaveamento e "byes" quando o número de times
-    não é potência de 2): **Copa do Brasil** (clubes das 4 divisões),
-    **Copa Libertadores** (clubes do Brasileirão Série A), **Mundial de
-    Clubes** (clubes das principais ligas do mundo) e **Mundo Livre**
-    (qualquer clube, inclusive os criados por você).
+    não é potência de 2): **UEFA Champions League** (clubes das principais
+    ligas europeias), **Copa do Brasil** (clubes das 4 divisões), **Copa
+    Libertadores** (clubes do Brasileirão Série A), **Mundial de Clubes**
+    (clubes das principais ligas do mundo) e **Mundo Livre** (qualquer
+    clube, inclusive os criados por você).
   - **Copa do Mundo FIFA** — fase de grupos (4 grupos de 6 seleções) +
     mata-mata com os 2 primeiros de cada grupo, jogada com as 24 seleções
     nacionais.

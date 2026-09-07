@@ -189,17 +189,19 @@ function topClubIds(leagueName, count) {
 
 competitions.push({
   id: competitionId++,
-  name: "Liga dos Campeões",
+  name: "UEFA Champions League",
   type: "Continental",
   country: "Europa",
+  format: "mata-mata",
+  eligibility: "Europa",
   clubIds: [
-    ...topClubIds("Premier League", 4),
-    ...topClubIds("La Liga", 4),
-    ...topClubIds("Serie A", 4),
-    ...topClubIds("Bundesliga", 4),
-    ...topClubIds("Ligue 1", 3),
-    ...topClubIds("Liga Portugal", 2),
-    ...topClubIds("Eredivisie", 2),
+    ...topClubIds("Premier League", 5),
+    ...topClubIds("La Liga", 5),
+    ...topClubIds("Serie A", 5),
+    ...topClubIds("Bundesliga", 5),
+    ...topClubIds("Ligue 1", 5),
+    ...topClubIds("Liga Portugal", 3),
+    ...topClubIds("Eredivisie", 4),
   ],
 });
 

@@ -91,7 +91,7 @@ function roundNamesFor(firstRoundSize) {
   return names;
 }
 
-function clubEligibleForCompetition(club, competition) {
+function clubEligibleForCompetition(club, competition, database) {
   if (!competition || !competition.eligibility) return false;
   switch (competition.eligibility) {
     case "qualquer":
@@ -100,6 +100,11 @@ function clubEligibleForCompetition(club, competition) {
       return !!club.nationalTeam;
     case "clube":
       return !club.nationalTeam;
+    case "Europa": {
+      if (club.nationalTeam) return false;
+      const country = database.getCountries().find((c) => c.name === club.country);
+      return !!country && country.continent === "Europa";
+    }
     default:
       return club.country === competition.eligibility && !club.nationalTeam;
   }
@@ -130,7 +135,7 @@ export class CareerManager {
     if (!club) return [];
     return this.database
       .getCompetitions()
-      .filter((c) => c.format && clubEligibleForCompetition(club, c));
+      .filter((c) => c.format && clubEligibleForCompetition(club, c, this.database));
   }
 
   /**
