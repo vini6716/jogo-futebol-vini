@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Márcio Andrade",
+    "country": "Brasil",
+    "strictness": "Moderado"
+  },
+  {
+    "id": 2,
+    "name": "Fernanda Kist",
+    "country": "Brasil",
+    "strictness": "Rigoroso"
+  },
+  {
+    "id": 3,
+    "name": "Otávio Prado",
+    "country": "Brasil",
+    "strictness": "Tolerante"
+  },
+  {
+    "id": 4,
+    "name": "Luana Beckert",
+    "country": "Brasil",
+    "strictness": "Moderado"
+  }
+]

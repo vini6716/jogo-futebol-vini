@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Arena Porto Novo",
+    "capacity": 53000,
+    "country": "Brasil",
+    "clubId": 1
+  },
+  {
+    "id": 2,
+    "name": "Arena Baía Grande",
+    "capacity": 52000,
+    "country": "Brasil",
+    "clubId": 2
+  },
+  {
+    "id": 3,
+    "name": "Arena Litoral Novo",
+    "capacity": 39000,
+    "country": "Brasil",
+    "clubId": 3
+  },
+  {
+    "id": 4,
+    "name": "Arena Serra Alta",
+    "capacity": 22000,
+    "country": "Brasil",
+    "clubId": 4
+  },
+  {
+    "id": 5,
+    "name": "Arena Vale Dourado",
+    "capacity": 28000,
+    "country": "Brasil",
+    "clubId": 5
+  },
+  {
+    "id": 6,
+    "name": "Arena Cerrado Alto",
+    "capacity": 30000,
+    "country": "Brasil",
+    "clubId": 6
+  },
+  {
+    "id": 7,
+    "name": "Arena Costa Azul",
+    "capacity": 22000,
+    "country": "Brasil",
+    "clubId": 7
+  },
+  {
+    "id": 8,
+    "name": "Arena Vale Verde",
+    "capacity": 63000,
+    "country": "Brasil",
+    "clubId": 8
+  }
+]
