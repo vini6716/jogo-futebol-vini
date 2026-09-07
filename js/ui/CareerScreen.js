@@ -1,5 +1,6 @@
 import { MatchManager } from "../match/MatchManager.js";
 import { emblemSvg } from "./emblem.js";
+import { groupClubsByLeagueHtml } from "./clubOptions.js";
 
 export function initCareer(router, game) {
   const el = document.getElementById("screen-career");
@@ -36,10 +37,8 @@ export function initCareer(router, game) {
   let liveInterval = null;
 
   function populateClubSelect() {
-    const clubs = [...game.database.getClubs()].sort((a, b) => a.name.localeCompare(b.name));
-    clubSelect.innerHTML = clubs
-      .map((c) => `<option value="${c.id}">${c.name} (${c.overallBase} OVR)</option>`)
-      .join("");
+    const clubs = [...game.database.getClubs()];
+    clubSelect.innerHTML = groupClubsByLeagueHtml(clubs);
   }
 
   function showSetup() {
@@ -58,7 +57,7 @@ export function initCareer(router, game) {
   function renderDashboard() {
     const state = game.career.state;
     const club = game.database.getClub(state.userClubId);
-    clubHeader.innerHTML = `${emblemSvg(club, 56)} <div><strong>${club.name}</strong><br><span class="muted">Técnico: ${state.managerName}</span></div>`;
+    clubHeader.innerHTML = `${emblemSvg(club, 56)} <div><strong>${club.name}</strong><br><span class="muted">${state.leagueName || "Liga Livre"} · Técnico: ${state.managerName}</span></div>`;
     seasonInfo.textContent = `Temporada ${state.season} · Rodada ${Math.min(state.round + 1, game.career.totalRounds)} de ${game.career.totalRounds}`;
     moneyInfo.textContent = `Caixa: R$ ${state.money.toLocaleString("pt-BR")}`;
 

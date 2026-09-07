@@ -39,9 +39,22 @@ inteira em qualquer hospedagem estática (GitHub Pages, Netlify, Vercel).
 - **Configurações** — volume de música/efeitos e dificuldade (Iniciante,
   Amador, Semiprofissional, Profissional, Lenda), que ajusta o quanto o
   motor de partida favorece o seu time.
-- **Banco de dados** — 8 clubes fictícios, ~130 jogadores, estádios,
-  país/liga/competições em `/database/*.json`, gerados por
-  `tools/generate-database.js` (reprodutível, com seed fixa).
+- **Banco de dados real** — clubes e seleções de verdade: as principais
+  ligas do mundo (Premier League, La Liga, Serie A, Bundesliga, Ligue 1,
+  Brasileirão Série A, Liga Portugal, Eredivisie — 152 clubes no total) mais
+  24 seleções nacionais, com estádios reais e ~600 jogadores reais
+  conhecidos (astros e titulares) espalhados pelos elencos. O restante de
+  cada elenco (até completar 16-17 jogadores por time) é preenchido com
+  reservas gerados com nomes plausíveis pra nacionalidade do clube, pra
+  ninguém ficar sem escalação. Tudo em `/database/*.json`, gerado por
+  `tools/generate-database.js` a partir de `tools/real-world-data.js`
+  (reprodutível, com seed fixa). Os escudos continuam sendo desenhados em
+  SVG genérico — não usamos logos oficiais.
+
+  > ⚠️ Elencos de futebol mudam a cada janela de transferência: isso é uma
+  > fotografia best-effort de conhecimento público, não um dado oficial ou
+  > licenciado. Pra atualizar nomes/times, edite `tools/real-world-data.js`
+  > e rode `node tools/generate-database.js` de novo.
 - **Online / Torneios / Treino** — telas de aviso explicando que dependem
   de um servidor multiplayer / ainda não foram implementadas, mantendo a
   estrutura prevista no design original.
@@ -59,7 +72,9 @@ js/
   clubs/       ClubCreator (geração de clube e elenco customizados)
   ui/          Router + telas (splash, menu, jogo rápido, criar clube, carreira, configurações)
 database/      countries, leagues, clubs, players, stadiums, competitions, referees (JSON)
-tools/         generate-database.js — script que gerou os JSONs acima
+tools/         real-world-data.js — dados reais (ligas/clubes/seleções/jogadores conhecidos)
+               db-core.js — países, pools de nomes e cálculo de atributos
+               generate-database.js — script que gera os JSONs acima a partir dos dois arquivos anteriores
 ```
 
 Não existem assets de imagem/áudio (as pastas `Assets/Logos`,

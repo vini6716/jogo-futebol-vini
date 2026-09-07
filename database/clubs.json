@@ -1,130 +1,2818 @@
 [
   {
     "id": 1,
-    "name": "Porto Novo FC",
-    "country": "Brasil",
-    "city": "Porto Novo",
-    "league": "Campeonato Brasileiro Série A",
+    "name": "Manchester City",
+    "country": "Inglaterra",
+    "city": "Manchester",
+    "league": "Premier League",
     "leagueId": 1,
     "stadiumId": 1,
     "colors": {
-      "primary": "#0d47a1",
-      "secondary": "#ffffff"
+      "primary": "#6CABDD",
+      "secondary": "#1C2C5B"
+    },
+    "emblem": "crest",
+    "overallBase": 90,
+    "custom": false
+  },
+  {
+    "id": 2,
+    "name": "Arsenal",
+    "country": "Inglaterra",
+    "city": "Londres",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 2,
+    "colors": {
+      "primary": "#EF0107",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 88,
+    "custom": false
+  },
+  {
+    "id": 3,
+    "name": "Liverpool",
+    "country": "Inglaterra",
+    "city": "Liverpool",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 3,
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 88,
+    "custom": false
+  },
+  {
+    "id": 4,
+    "name": "Manchester United",
+    "country": "Inglaterra",
+    "city": "Manchester",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 4,
+    "colors": {
+      "primary": "#DA291C",
+      "secondary": "#000000"
+    },
+    "emblem": "wing",
+    "overallBase": 82,
+    "custom": false
+  },
+  {
+    "id": 5,
+    "name": "Chelsea",
+    "country": "Inglaterra",
+    "city": "Londres",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 5,
+    "colors": {
+      "primary": "#034694",
+      "secondary": "#FFFFFF"
     },
     "emblem": "shield",
     "overallBase": 82,
     "custom": false
   },
   {
-    "id": 2,
-    "name": "Estrela do Sul EC",
-    "country": "Brasil",
-    "city": "Baía Grande",
-    "league": "Campeonato Brasileiro Série A",
+    "id": 6,
+    "name": "Tottenham Hotspur",
+    "country": "Inglaterra",
+    "city": "Londres",
+    "league": "Premier League",
     "leagueId": 1,
-    "stadiumId": 2,
+    "stadiumId": 6,
     "colors": {
-      "primary": "#1b5e20",
-      "secondary": "#ffd600"
+      "primary": "#132257",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 81,
+    "custom": false
+  },
+  {
+    "id": 7,
+    "name": "Newcastle United",
+    "country": "Inglaterra",
+    "city": "Newcastle",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 7,
+    "colors": {
+      "primary": "#241F20",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
+    "overallBase": 80,
+    "custom": false
+  },
+  {
+    "id": 8,
+    "name": "Aston Villa",
+    "country": "Inglaterra",
+    "city": "Birmingham",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 8,
+    "colors": {
+      "primary": "#670E36",
+      "secondary": "#95BFE5"
+    },
+    "emblem": "leaf",
+    "overallBase": 80,
+    "custom": false
+  },
+  {
+    "id": 9,
+    "name": "Brighton & Hove Albion",
+    "country": "Inglaterra",
+    "city": "Brighton",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 9,
+    "colors": {
+      "primary": "#0057B8",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 10,
+    "name": "West Ham United",
+    "country": "Inglaterra",
+    "city": "Londres",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 10,
+    "colors": {
+      "primary": "#7A263A",
+      "secondary": "#1BB1E7"
+    },
+    "emblem": "wing",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 11,
+    "name": "Crystal Palace",
+    "country": "Inglaterra",
+    "city": "Londres",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 11,
+    "colors": {
+      "primary": "#1B458F",
+      "secondary": "#C4122E"
+    },
+    "emblem": "shield",
+    "overallBase": 74,
+    "custom": false
+  },
+  {
+    "id": 12,
+    "name": "Fulham",
+    "country": "Inglaterra",
+    "city": "Londres",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 12,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 73,
+    "custom": false
+  },
+  {
+    "id": 13,
+    "name": "Wolverhampton Wanderers",
+    "country": "Inglaterra",
+    "city": "Wolverhampton",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 13,
+    "colors": {
+      "primary": "#FDB913",
+      "secondary": "#231F20"
+    },
+    "emblem": "crest",
+    "overallBase": 73,
+    "custom": false
+  },
+  {
+    "id": 14,
+    "name": "Everton",
+    "country": "Inglaterra",
+    "city": "Liverpool",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 14,
+    "colors": {
+      "primary": "#003399",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 72,
+    "custom": false
+  },
+  {
+    "id": 15,
+    "name": "Brentford",
+    "country": "Inglaterra",
+    "city": "Londres",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 15,
+    "colors": {
+      "primary": "#E30613",
+      "secondary": "#FFB300"
+    },
+    "emblem": "sun",
+    "overallBase": 72,
+    "custom": false
+  },
+  {
+    "id": 16,
+    "name": "Nottingham Forest",
+    "country": "Inglaterra",
+    "city": "Nottingham",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 16,
+    "colors": {
+      "primary": "#DD0000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 72,
+    "custom": false
+  },
+  {
+    "id": 17,
+    "name": "AFC Bournemouth",
+    "country": "Inglaterra",
+    "city": "Bournemouth",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 17,
+    "colors": {
+      "primary": "#DA291C",
+      "secondary": "#000000"
+    },
+    "emblem": "shield",
+    "overallBase": 71,
+    "custom": false
+  },
+  {
+    "id": 18,
+    "name": "Leicester City",
+    "country": "Inglaterra",
+    "city": "Leicester",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 18,
+    "colors": {
+      "primary": "#003090",
+      "secondary": "#FDBE11"
+    },
+    "emblem": "star",
+    "overallBase": 68,
+    "custom": false
+  },
+  {
+    "id": 19,
+    "name": "Ipswich Town",
+    "country": "Inglaterra",
+    "city": "Ipswich",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 19,
+    "colors": {
+      "primary": "#0044A9",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
+    "overallBase": 66,
+    "custom": false
+  },
+  {
+    "id": 20,
+    "name": "Southampton",
+    "country": "Inglaterra",
+    "city": "Southampton",
+    "league": "Premier League",
+    "leagueId": 1,
+    "stadiumId": 20,
+    "colors": {
+      "primary": "#D71920",
+      "secondary": "#130C0E"
+    },
+    "emblem": "leaf",
+    "overallBase": 66,
+    "custom": false
+  },
+  {
+    "id": 21,
+    "name": "Real Madrid",
+    "country": "Espanha",
+    "city": "Madri",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 21,
+    "colors": {
+      "primary": "#FEBE10",
+      "secondary": "#00529F"
+    },
+    "emblem": "sun",
+    "overallBase": 91,
+    "custom": false
+  },
+  {
+    "id": 22,
+    "name": "Barcelona",
+    "country": "Espanha",
+    "city": "Barcelona",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 22,
+    "colors": {
+      "primary": "#A50044",
+      "secondary": "#004D98"
+    },
+    "emblem": "wing",
+    "overallBase": 89,
+    "custom": false
+  },
+  {
+    "id": 23,
+    "name": "Atlético Madrid",
+    "country": "Espanha",
+    "city": "Madri",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 23,
+    "colors": {
+      "primary": "#CB3524",
+      "secondary": "#272E61"
+    },
+    "emblem": "shield",
+    "overallBase": 85,
+    "custom": false
+  },
+  {
+    "id": 24,
+    "name": "Girona",
+    "country": "Espanha",
+    "city": "Girona",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 24,
+    "colors": {
+      "primary": "#CD2534",
+      "secondary": "#FFFFFF"
     },
     "emblem": "star",
     "overallBase": 78,
     "custom": false
   },
   {
-    "id": 3,
-    "name": "Atlético Litoral",
-    "country": "Brasil",
-    "city": "Litoral Novo",
-    "league": "Campeonato Brasileiro Série A",
-    "leagueId": 1,
-    "stadiumId": 3,
+    "id": 25,
+    "name": "Athletic Bilbao",
+    "country": "Espanha",
+    "city": "Bilbau",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 25,
     "colors": {
-      "primary": "#b71c1c",
-      "secondary": "#000000"
+      "primary": "#EE2523",
+      "secondary": "#FFFFFF"
     },
     "emblem": "crest",
-    "overallBase": 75,
+    "overallBase": 79,
     "custom": false
   },
   {
-    "id": 4,
-    "name": "Coração Verde FC",
-    "country": "Brasil",
-    "city": "Serra Alta",
-    "league": "Campeonato Brasileiro Série A",
-    "leagueId": 1,
-    "stadiumId": 4,
+    "id": 26,
+    "name": "Real Sociedad",
+    "country": "Espanha",
+    "city": "San Sebastián",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 26,
     "colors": {
-      "primary": "#004d40",
-      "secondary": "#c8e6c9"
+      "primary": "#0067B1",
+      "secondary": "#FFFFFF"
     },
     "emblem": "leaf",
-    "overallBase": 73,
+    "overallBase": 78,
     "custom": false
   },
   {
-    "id": 5,
-    "name": "União Dourada AC",
-    "country": "Brasil",
-    "city": "Vale Dourado",
-    "league": "Campeonato Brasileiro Série A",
-    "leagueId": 1,
-    "stadiumId": 5,
+    "id": 27,
+    "name": "Real Betis",
+    "country": "Espanha",
+    "city": "Sevilha",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 27,
     "colors": {
-      "primary": "#e65100",
-      "secondary": "#212121"
+      "primary": "#00954C",
+      "secondary": "#FFFFFF"
     },
     "emblem": "sun",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 28,
+    "name": "Villarreal",
+    "country": "Espanha",
+    "city": "Villarreal",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 28,
+    "colors": {
+      "primary": "#FFE667",
+      "secondary": "#005187"
+    },
+    "emblem": "wing",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 29,
+    "name": "Valencia",
+    "country": "Espanha",
+    "city": "Valência",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 29,
+    "colors": {
+      "primary": "#EE3524",
+      "secondary": "#F4A836"
+    },
+    "emblem": "shield",
+    "overallBase": 74,
+    "custom": false
+  },
+  {
+    "id": 30,
+    "name": "Sevilla",
+    "country": "Espanha",
+    "city": "Sevilha",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 30,
+    "colors": {
+      "primary": "#D2001C",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 74,
+    "custom": false
+  },
+  {
+    "id": 31,
+    "name": "Getafe",
+    "country": "Espanha",
+    "city": "Getafe",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 31,
+    "colors": {
+      "primary": "#005CA9",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
     "overallBase": 70,
     "custom": false
   },
   {
-    "id": 6,
-    "name": "Real Cerrado FC",
-    "country": "Brasil",
-    "city": "Cerrado Alto",
-    "league": "Campeonato Brasileiro Série A",
-    "leagueId": 1,
-    "stadiumId": 6,
+    "id": 32,
+    "name": "Osasuna",
+    "country": "Espanha",
+    "city": "Pamplona",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 32,
     "colors": {
-      "primary": "#4a148c",
-      "secondary": "#ffffff"
+      "primary": "#D2001C",
+      "secondary": "#062454"
+    },
+    "emblem": "leaf",
+    "overallBase": 70,
+    "custom": false
+  },
+  {
+    "id": 33,
+    "name": "Celta de Vigo",
+    "country": "Espanha",
+    "city": "Vigo",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 33,
+    "colors": {
+      "primary": "#8AC3EE",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 71,
+    "custom": false
+  },
+  {
+    "id": 34,
+    "name": "Rayo Vallecano",
+    "country": "Espanha",
+    "city": "Madri",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 34,
+    "colors": {
+      "primary": "#C4122E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 69,
+    "custom": false
+  },
+  {
+    "id": 35,
+    "name": "Mallorca",
+    "country": "Espanha",
+    "city": "Palma",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 35,
+    "colors": {
+      "primary": "#CC0000",
+      "secondary": "#000000"
     },
     "emblem": "shield",
+    "overallBase": 70,
+    "custom": false
+  },
+  {
+    "id": 36,
+    "name": "Las Palmas",
+    "country": "Espanha",
+    "city": "Las Palmas",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 36,
+    "colors": {
+      "primary": "#FFE100",
+      "secondary": "#005BAA"
+    },
+    "emblem": "star",
     "overallBase": 68,
     "custom": false
   },
   {
-    "id": 7,
-    "name": "Fênix Atlântico",
-    "country": "Brasil",
-    "city": "Costa Azul",
-    "league": "Campeonato Brasileiro Série A",
-    "leagueId": 1,
-    "stadiumId": 7,
+    "id": 37,
+    "name": "Deportivo Alavés",
+    "country": "Espanha",
+    "city": "Vitória-Gasteiz",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 37,
     "colors": {
-      "primary": "#01579b",
-      "secondary": "#ffab00"
+      "primary": "#1F3F8F",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
+    "overallBase": 68,
+    "custom": false
+  },
+  {
+    "id": 38,
+    "name": "Espanyol",
+    "country": "Espanha",
+    "city": "Barcelona",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 38,
+    "colors": {
+      "primary": "#0057A8",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 67,
+    "custom": false
+  },
+  {
+    "id": 39,
+    "name": "CD Leganés",
+    "country": "Espanha",
+    "city": "Leganés",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 39,
+    "colors": {
+      "primary": "#005BAA",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 65,
+    "custom": false
+  },
+  {
+    "id": 40,
+    "name": "Real Valladolid",
+    "country": "Espanha",
+    "city": "Valladolid",
+    "league": "La Liga",
+    "leagueId": 2,
+    "stadiumId": 40,
+    "colors": {
+      "primary": "#6E2A7A",
+      "secondary": "#FFFFFF"
     },
     "emblem": "wing",
     "overallBase": 65,
     "custom": false
   },
   {
-    "id": 8,
-    "name": "Leões do Vale",
-    "country": "Brasil",
-    "city": "Vale Verde",
-    "league": "Campeonato Brasileiro Série A",
-    "leagueId": 1,
-    "stadiumId": 8,
+    "id": 41,
+    "name": "Inter de Milão",
+    "country": "Itália",
+    "city": "Milão",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 41,
     "colors": {
-      "primary": "#f9a825",
-      "secondary": "#1b1b1b"
+      "primary": "#0D3C7B",
+      "secondary": "#000000"
+    },
+    "emblem": "shield",
+    "overallBase": 87,
+    "custom": false
+  },
+  {
+    "id": 42,
+    "name": "AC Milan",
+    "country": "Itália",
+    "city": "Milão",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 42,
+    "colors": {
+      "primary": "#FB090B",
+      "secondary": "#000000"
+    },
+    "emblem": "star",
+    "overallBase": 84,
+    "custom": false
+  },
+  {
+    "id": 43,
+    "name": "Juventus",
+    "country": "Itália",
+    "city": "Turim",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 43,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
+    "overallBase": 84,
+    "custom": false
+  },
+  {
+    "id": 44,
+    "name": "Napoli",
+    "country": "Itália",
+    "city": "Nápoles",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 44,
+    "colors": {
+      "primary": "#12A0D7",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 83,
+    "custom": false
+  },
+  {
+    "id": 45,
+    "name": "AS Roma",
+    "country": "Itália",
+    "city": "Roma",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 45,
+    "colors": {
+      "primary": "#8E1F2F",
+      "secondary": "#F0BC42"
+    },
+    "emblem": "sun",
+    "overallBase": 79,
+    "custom": false
+  },
+  {
+    "id": 46,
+    "name": "Lazio",
+    "country": "Itália",
+    "city": "Roma",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 46,
+    "colors": {
+      "primary": "#87CEEB",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 78,
+    "custom": false
+  },
+  {
+    "id": 47,
+    "name": "Atalanta",
+    "country": "Itália",
+    "city": "Bérgamo",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 47,
+    "colors": {
+      "primary": "#1E71B8",
+      "secondary": "#000000"
+    },
+    "emblem": "shield",
+    "overallBase": 80,
+    "custom": false
+  },
+  {
+    "id": 48,
+    "name": "Fiorentina",
+    "country": "Itália",
+    "city": "Florença",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 48,
+    "colors": {
+      "primary": "#5B2A86",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 49,
+    "name": "Bologna",
+    "country": "Itália",
+    "city": "Bolonha",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 49,
+    "colors": {
+      "primary": "#A6192E",
+      "secondary": "#1E3888"
+    },
+    "emblem": "crest",
+    "overallBase": 75,
+    "custom": false
+  },
+  {
+    "id": 50,
+    "name": "Torino",
+    "country": "Itália",
+    "city": "Turim",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 50,
+    "colors": {
+      "primary": "#841F27",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 71,
+    "custom": false
+  },
+  {
+    "id": 51,
+    "name": "Udinese",
+    "country": "Itália",
+    "city": "Udine",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 51,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 69,
+    "custom": false
+  },
+  {
+    "id": 52,
+    "name": "Genoa",
+    "country": "Itália",
+    "city": "Gênova",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 52,
+    "colors": {
+      "primary": "#B41E24",
+      "secondary": "#002B5C"
+    },
+    "emblem": "wing",
+    "overallBase": 68,
+    "custom": false
+  },
+  {
+    "id": 53,
+    "name": "Monza",
+    "country": "Itália",
+    "city": "Monza",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 53,
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 67,
+    "custom": false
+  },
+  {
+    "id": 54,
+    "name": "Hellas Verona",
+    "country": "Itália",
+    "city": "Verona",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 54,
+    "colors": {
+      "primary": "#FCE300",
+      "secondary": "#003DA5"
+    },
+    "emblem": "star",
+    "overallBase": 65,
+    "custom": false
+  },
+  {
+    "id": 55,
+    "name": "Cagliari",
+    "country": "Itália",
+    "city": "Cagliari",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 55,
+    "colors": {
+      "primary": "#A6192E",
+      "secondary": "#00205B"
+    },
+    "emblem": "crest",
+    "overallBase": 65,
+    "custom": false
+  },
+  {
+    "id": 56,
+    "name": "Lecce",
+    "country": "Itália",
+    "city": "Lecce",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 56,
+    "colors": {
+      "primary": "#FFD700",
+      "secondary": "#C8102E"
+    },
+    "emblem": "leaf",
+    "overallBase": 64,
+    "custom": false
+  },
+  {
+    "id": 57,
+    "name": "Parma",
+    "country": "Itália",
+    "city": "Parma",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 57,
+    "colors": {
+      "primary": "#FFCE00",
+      "secondary": "#002B5C"
+    },
+    "emblem": "sun",
+    "overallBase": 64,
+    "custom": false
+  },
+  {
+    "id": 58,
+    "name": "Como 1907",
+    "country": "Itália",
+    "city": "Como",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 58,
+    "colors": {
+      "primary": "#003DA5",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 63,
+    "custom": false
+  },
+  {
+    "id": 59,
+    "name": "Empoli",
+    "country": "Itália",
+    "city": "Empoli",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 59,
+    "colors": {
+      "primary": "#005BAC",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 63,
+    "custom": false
+  },
+  {
+    "id": 60,
+    "name": "Venezia",
+    "country": "Itália",
+    "city": "Veneza",
+    "league": "Serie A",
+    "leagueId": 3,
+    "stadiumId": 60,
+    "colors": {
+      "primary": "#F5811F",
+      "secondary": "#000000"
+    },
+    "emblem": "star",
+    "overallBase": 62,
+    "custom": false
+  },
+  {
+    "id": 61,
+    "name": "Bayern de Munique",
+    "country": "Alemanha",
+    "city": "Munique",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 61,
+    "colors": {
+      "primary": "#DC052D",
+      "secondary": "#0066B2"
+    },
+    "emblem": "crest",
+    "overallBase": 89,
+    "custom": false
+  },
+  {
+    "id": 62,
+    "name": "Borussia Dortmund",
+    "country": "Alemanha",
+    "city": "Dortmund",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 62,
+    "colors": {
+      "primary": "#FDE100",
+      "secondary": "#000000"
+    },
+    "emblem": "leaf",
+    "overallBase": 82,
+    "custom": false
+  },
+  {
+    "id": 63,
+    "name": "RB Leipzig",
+    "country": "Alemanha",
+    "city": "Leipzig",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 63,
+    "colors": {
+      "primary": "#DD0741",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 81,
+    "custom": false
+  },
+  {
+    "id": 64,
+    "name": "Bayer Leverkusen",
+    "country": "Alemanha",
+    "city": "Leverkusen",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 64,
+    "colors": {
+      "primary": "#E32221",
+      "secondary": "#000000"
+    },
+    "emblem": "wing",
+    "overallBase": 84,
+    "custom": false
+  },
+  {
+    "id": 65,
+    "name": "Eintracht Frankfurt",
+    "country": "Alemanha",
+    "city": "Frankfurt",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 65,
+    "colors": {
+      "primary": "#E1000F",
+      "secondary": "#000000"
+    },
+    "emblem": "shield",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 66,
+    "name": "VfB Stuttgart",
+    "country": "Alemanha",
+    "city": "Stuttgart",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 66,
+    "colors": {
+      "primary": "#E32219",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 78,
+    "custom": false
+  },
+  {
+    "id": 67,
+    "name": "Borussia Mönchengladbach",
+    "country": "Alemanha",
+    "city": "Mönchengladbach",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 67,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
+    "overallBase": 72,
+    "custom": false
+  },
+  {
+    "id": 68,
+    "name": "VfL Wolfsburg",
+    "country": "Alemanha",
+    "city": "Wolfsburgo",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 68,
+    "colors": {
+      "primary": "#65B32E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 71,
+    "custom": false
+  },
+  {
+    "id": 69,
+    "name": "SC Freiburg",
+    "country": "Alemanha",
+    "city": "Friburgo",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 69,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#DD0000"
+    },
+    "emblem": "sun",
+    "overallBase": 73,
+    "custom": false
+  },
+  {
+    "id": 70,
+    "name": "1. FC Union Berlin",
+    "country": "Alemanha",
+    "city": "Berlim",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 70,
+    "colors": {
+      "primary": "#EB1923",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 71,
+    "custom": false
+  },
+  {
+    "id": 71,
+    "name": "Werder Bremen",
+    "country": "Alemanha",
+    "city": "Bremen",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 71,
+    "colors": {
+      "primary": "#009036",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 70,
+    "custom": false
+  },
+  {
+    "id": 72,
+    "name": "Mainz 05",
+    "country": "Alemanha",
+    "city": "Mainz",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 72,
+    "colors": {
+      "primary": "#C3141E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 69,
+    "custom": false
+  },
+  {
+    "id": 73,
+    "name": "TSG Hoffenheim",
+    "country": "Alemanha",
+    "city": "Sinsheim",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 73,
+    "colors": {
+      "primary": "#1961B5",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
+    "overallBase": 69,
+    "custom": false
+  },
+  {
+    "id": 74,
+    "name": "FC Augsburg",
+    "country": "Alemanha",
+    "city": "Augsburgo",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 74,
+    "colors": {
+      "primary": "#BA3733",
+      "secondary": "#00543C"
+    },
+    "emblem": "leaf",
+    "overallBase": 67,
+    "custom": false
+  },
+  {
+    "id": 75,
+    "name": "1. FC Heidenheim",
+    "country": "Alemanha",
+    "city": "Heidenheim",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 75,
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#003DA5"
+    },
+    "emblem": "sun",
+    "overallBase": 65,
+    "custom": false
+  },
+  {
+    "id": 76,
+    "name": "FC St. Pauli",
+    "country": "Alemanha",
+    "city": "Hamburgo",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 76,
+    "colors": {
+      "primary": "#8B4513",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 65,
+    "custom": false
+  },
+  {
+    "id": 77,
+    "name": "VfL Bochum",
+    "country": "Alemanha",
+    "city": "Bochum",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 77,
+    "colors": {
+      "primary": "#005CA9",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 64,
+    "custom": false
+  },
+  {
+    "id": 78,
+    "name": "Holstein Kiel",
+    "country": "Alemanha",
+    "city": "Kiel",
+    "league": "Bundesliga",
+    "leagueId": 4,
+    "stadiumId": 78,
+    "colors": {
+      "primary": "#003399",
+      "secondary": "#C8102E"
+    },
+    "emblem": "star",
+    "overallBase": 63,
+    "custom": false
+  },
+  {
+    "id": 79,
+    "name": "Paris Saint-Germain",
+    "country": "França",
+    "city": "Paris",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 79,
+    "colors": {
+      "primary": "#004170",
+      "secondary": "#DA291C"
+    },
+    "emblem": "crest",
+    "overallBase": 87,
+    "custom": false
+  },
+  {
+    "id": 80,
+    "name": "AS Monaco",
+    "country": "França",
+    "city": "Mônaco",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 80,
+    "colors": {
+      "primary": "#E51A23",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 78,
+    "custom": false
+  },
+  {
+    "id": 81,
+    "name": "Olympique de Marselha",
+    "country": "França",
+    "city": "Marselha",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 81,
+    "colors": {
+      "primary": "#2FAEE0",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 78,
+    "custom": false
+  },
+  {
+    "id": 82,
+    "name": "Lille OSC",
+    "country": "França",
+    "city": "Lille",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 82,
+    "colors": {
+      "primary": "#E2001A",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 83,
+    "name": "Olympique Lyonnais",
+    "country": "França",
+    "city": "Lyon",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 83,
+    "colors": {
+      "primary": "#1B0C77",
+      "secondary": "#DA291C"
+    },
+    "emblem": "shield",
+    "overallBase": 75,
+    "custom": false
+  },
+  {
+    "id": 84,
+    "name": "OGC Nice",
+    "country": "França",
+    "city": "Nice",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 84,
+    "colors": {
+      "primary": "#ED1C24",
+      "secondary": "#000000"
+    },
+    "emblem": "star",
+    "overallBase": 74,
+    "custom": false
+  },
+  {
+    "id": 85,
+    "name": "RC Lens",
+    "country": "França",
+    "city": "Lens",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 85,
+    "colors": {
+      "primary": "#FFD100",
+      "secondary": "#C8102E"
+    },
+    "emblem": "crest",
+    "overallBase": 73,
+    "custom": false
+  },
+  {
+    "id": 86,
+    "name": "Stade Rennais",
+    "country": "França",
+    "city": "Rennes",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 86,
+    "colors": {
+      "primary": "#E2231A",
+      "secondary": "#000000"
+    },
+    "emblem": "leaf",
+    "overallBase": 71,
+    "custom": false
+  },
+  {
+    "id": 87,
+    "name": "Toulouse FC",
+    "country": "França",
+    "city": "Toulouse",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 87,
+    "colors": {
+      "primary": "#6C2A7E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 68,
+    "custom": false
+  },
+  {
+    "id": 88,
+    "name": "RC Strasbourg",
+    "country": "França",
+    "city": "Estrasburgo",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 88,
+    "colors": {
+      "primary": "#1D4F91",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 67,
+    "custom": false
+  },
+  {
+    "id": 89,
+    "name": "Stade de Reims",
+    "country": "França",
+    "city": "Reims",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 89,
+    "colors": {
+      "primary": "#E2001A",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 66,
+    "custom": false
+  },
+  {
+    "id": 90,
+    "name": "FC Nantes",
+    "country": "França",
+    "city": "Nantes",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 90,
+    "colors": {
+      "primary": "#FFDD00",
+      "secondary": "#007A3D"
+    },
+    "emblem": "star",
+    "overallBase": 66,
+    "custom": false
+  },
+  {
+    "id": 91,
+    "name": "Montpellier HSC",
+    "country": "França",
+    "city": "Montpellier",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 91,
+    "colors": {
+      "primary": "#004A93",
+      "secondary": "#F58220"
+    },
+    "emblem": "crest",
+    "overallBase": 65,
+    "custom": false
+  },
+  {
+    "id": 92,
+    "name": "Stade Brestois",
+    "country": "França",
+    "city": "Brest",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 92,
+    "colors": {
+      "primary": "#E2001A",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 68,
+    "custom": false
+  },
+  {
+    "id": 93,
+    "name": "Le Havre AC",
+    "country": "França",
+    "city": "Le Havre",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 93,
+    "colors": {
+      "primary": "#1D4F91",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 63,
+    "custom": false
+  },
+  {
+    "id": 94,
+    "name": "Angers SCO",
+    "country": "França",
+    "city": "Angers",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 94,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 62,
+    "custom": false
+  },
+  {
+    "id": 95,
+    "name": "AJ Auxerre",
+    "country": "França",
+    "city": "Auxerre",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 95,
+    "colors": {
+      "primary": "#002F87",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 62,
+    "custom": false
+  },
+  {
+    "id": 96,
+    "name": "AS Saint-Étienne",
+    "country": "França",
+    "city": "Saint-Étienne",
+    "league": "Ligue 1",
+    "leagueId": 5,
+    "stadiumId": 96,
+    "colors": {
+      "primary": "#4CA943",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 64,
+    "custom": false
+  },
+  {
+    "id": 97,
+    "name": "Flamengo",
+    "country": "Brasil",
+    "city": "Rio de Janeiro",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 97,
+    "colors": {
+      "primary": "#C52020",
+      "secondary": "#000000"
+    },
+    "emblem": "crest",
+    "overallBase": 86,
+    "custom": false
+  },
+  {
+    "id": 98,
+    "name": "Palmeiras",
+    "country": "Brasil",
+    "city": "São Paulo",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 98,
+    "colors": {
+      "primary": "#006437",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 86,
+    "custom": false
+  },
+  {
+    "id": 99,
+    "name": "São Paulo",
+    "country": "Brasil",
+    "city": "São Paulo",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 99,
+    "colors": {
+      "primary": "#C0392B",
+      "secondary": "#000000"
+    },
+    "emblem": "sun",
+    "overallBase": 79,
+    "custom": false
+  },
+  {
+    "id": 100,
+    "name": "Corinthians",
+    "country": "Brasil",
+    "city": "São Paulo",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 100,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 78,
+    "custom": false
+  },
+  {
+    "id": 101,
+    "name": "Fluminense",
+    "country": "Brasil",
+    "city": "Rio de Janeiro",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 101,
+    "colors": {
+      "primary": "#830E29",
+      "secondary": "#006437"
+    },
+    "emblem": "shield",
+    "overallBase": 79,
+    "custom": false
+  },
+  {
+    "id": 102,
+    "name": "Botafogo",
+    "country": "Brasil",
+    "city": "Rio de Janeiro",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 102,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 82,
+    "custom": false
+  },
+  {
+    "id": 103,
+    "name": "Grêmio",
+    "country": "Brasil",
+    "city": "Porto Alegre",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 103,
+    "colors": {
+      "primary": "#0038A8",
+      "secondary": "#000000"
+    },
+    "emblem": "crest",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 104,
+    "name": "Internacional",
+    "country": "Brasil",
+    "city": "Porto Alegre",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 104,
+    "colors": {
+      "primary": "#E4002B",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 105,
+    "name": "Atlético Mineiro",
+    "country": "Brasil",
+    "city": "Belo Horizonte",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 105,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 79,
+    "custom": false
+  },
+  {
+    "id": 106,
+    "name": "Cruzeiro",
+    "country": "Brasil",
+    "city": "Belo Horizonte",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 106,
+    "colors": {
+      "primary": "#003DA5",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 75,
+    "custom": false
+  },
+  {
+    "id": 107,
+    "name": "Bahia",
+    "country": "Brasil",
+    "city": "Salvador",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 107,
+    "colors": {
+      "primary": "#1560BD",
+      "secondary": "#E4002B"
+    },
+    "emblem": "shield",
+    "overallBase": 74,
+    "custom": false
+  },
+  {
+    "id": 108,
+    "name": "Vasco da Gama",
+    "country": "Brasil",
+    "city": "Rio de Janeiro",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 108,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 72,
+    "custom": false
+  },
+  {
+    "id": 109,
+    "name": "Santos",
+    "country": "Brasil",
+    "city": "Santos",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 109,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
+    "overallBase": 71,
+    "custom": false
+  },
+  {
+    "id": 110,
+    "name": "Fortaleza",
+    "country": "Brasil",
+    "city": "Fortaleza",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 110,
+    "colors": {
+      "primary": "#1560BD",
+      "secondary": "#C8102E"
+    },
+    "emblem": "leaf",
+    "overallBase": 74,
+    "custom": false
+  },
+  {
+    "id": 111,
+    "name": "Red Bull Bragantino",
+    "country": "Brasil",
+    "city": "Bragança Paulista",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 111,
+    "colors": {
+      "primary": "#E4002B",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 73,
+    "custom": false
+  },
+  {
+    "id": 112,
+    "name": "Athletico Paranaense",
+    "country": "Brasil",
+    "city": "Curitiba",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 112,
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#000000"
+    },
+    "emblem": "wing",
+    "overallBase": 72,
+    "custom": false
+  },
+  {
+    "id": 113,
+    "name": "Criciúma",
+    "country": "Brasil",
+    "city": "Criciúma",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 113,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFD700"
+    },
+    "emblem": "shield",
+    "overallBase": 65,
+    "custom": false
+  },
+  {
+    "id": 114,
+    "name": "Cuiabá",
+    "country": "Brasil",
+    "city": "Cuiabá",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 114,
+    "colors": {
+      "primary": "#006341",
+      "secondary": "#FFD700"
+    },
+    "emblem": "star",
+    "overallBase": 65,
+    "custom": false
+  },
+  {
+    "id": 115,
+    "name": "Vitória",
+    "country": "Brasil",
+    "city": "Salvador",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 115,
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#000000"
+    },
+    "emblem": "crest",
+    "overallBase": 66,
+    "custom": false
+  },
+  {
+    "id": 116,
+    "name": "Juventude",
+    "country": "Brasil",
+    "city": "Caxias do Sul",
+    "league": "Campeonato Brasileiro Série A",
+    "leagueId": 6,
+    "stadiumId": 116,
+    "colors": {
+      "primary": "#006341",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 65,
+    "custom": false
+  },
+  {
+    "id": 117,
+    "name": "Benfica",
+    "country": "Portugal",
+    "city": "Lisboa",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 117,
+    "colors": {
+      "primary": "#E4002B",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 83,
+    "custom": false
+  },
+  {
+    "id": 118,
+    "name": "Porto",
+    "country": "Portugal",
+    "city": "Porto",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 118,
+    "colors": {
+      "primary": "#003DA5",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 83,
+    "custom": false
+  },
+  {
+    "id": 119,
+    "name": "Sporting CP",
+    "country": "Portugal",
+    "city": "Lisboa",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 119,
+    "colors": {
+      "primary": "#007A33",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 84,
+    "custom": false
+  },
+  {
+    "id": 120,
+    "name": "Braga",
+    "country": "Portugal",
+    "city": "Braga",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 120,
+    "colors": {
+      "primary": "#E4002B",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 121,
+    "name": "Vitória de Guimarães",
+    "country": "Portugal",
+    "city": "Guimarães",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 121,
+    "colors": {
+      "primary": "#FFFFFF",
+      "secondary": "#000000"
+    },
+    "emblem": "crest",
+    "overallBase": 71,
+    "custom": false
+  },
+  {
+    "id": 122,
+    "name": "Boavista",
+    "country": "Portugal",
+    "city": "Porto",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 122,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 66,
+    "custom": false
+  },
+  {
+    "id": 123,
+    "name": "Famalicão",
+    "country": "Portugal",
+    "city": "Famalicão",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 123,
+    "colors": {
+      "primary": "#FFFFFF",
+      "secondary": "#000000"
+    },
+    "emblem": "sun",
+    "overallBase": 66,
+    "custom": false
+  },
+  {
+    "id": 124,
+    "name": "Casa Pia",
+    "country": "Portugal",
+    "city": "Lisboa",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 124,
+    "colors": {
+      "primary": "#00A650",
+      "secondary": "#000000"
+    },
+    "emblem": "wing",
+    "overallBase": 64,
+    "custom": false
+  },
+  {
+    "id": 125,
+    "name": "Rio Ave",
+    "country": "Portugal",
+    "city": "Vila do Conde",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 125,
+    "colors": {
+      "primary": "#00A650",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 64,
+    "custom": false
+  },
+  {
+    "id": 126,
+    "name": "Moreirense",
+    "country": "Portugal",
+    "city": "Moreira de Cónegos",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 126,
+    "colors": {
+      "primary": "#00A650",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 63,
+    "custom": false
+  },
+  {
+    "id": 127,
+    "name": "Estoril Praia",
+    "country": "Portugal",
+    "city": "Estoril",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 127,
+    "colors": {
+      "primary": "#FFD700",
+      "secondary": "#000000"
+    },
+    "emblem": "crest",
+    "overallBase": 64,
+    "custom": false
+  },
+  {
+    "id": 128,
+    "name": "Arouca",
+    "country": "Portugal",
+    "city": "Arouca",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 128,
+    "colors": {
+      "primary": "#FFD700",
+      "secondary": "#000000"
+    },
+    "emblem": "leaf",
+    "overallBase": 63,
+    "custom": false
+  },
+  {
+    "id": 129,
+    "name": "Gil Vicente",
+    "country": "Portugal",
+    "city": "Barcelos",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 129,
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 63,
+    "custom": false
+  },
+  {
+    "id": 130,
+    "name": "Farense",
+    "country": "Portugal",
+    "city": "Faro",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 130,
+    "colors": {
+      "primary": "#009639",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 62,
+    "custom": false
+  },
+  {
+    "id": 131,
+    "name": "Santa Clara",
+    "country": "Portugal",
+    "city": "Ponta Delgada",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 131,
+    "colors": {
+      "primary": "#FFD700",
+      "secondary": "#000000"
+    },
+    "emblem": "shield",
+    "overallBase": 62,
+    "custom": false
+  },
+  {
+    "id": 132,
+    "name": "Estrela da Amadora",
+    "country": "Portugal",
+    "city": "Amadora",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 132,
+    "colors": {
+      "primary": "#00A650",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 61,
+    "custom": false
+  },
+  {
+    "id": 133,
+    "name": "Nacional",
+    "country": "Portugal",
+    "city": "Funchal",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 133,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFD700"
+    },
+    "emblem": "crest",
+    "overallBase": 61,
+    "custom": false
+  },
+  {
+    "id": 134,
+    "name": "AVS",
+    "country": "Portugal",
+    "city": "Vila das Aves",
+    "league": "Liga Portugal",
+    "leagueId": 7,
+    "stadiumId": 134,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 60,
+    "custom": false
+  },
+  {
+    "id": 135,
+    "name": "Ajax",
+    "country": "Holanda",
+    "city": "Amsterdã",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 135,
+    "colors": {
+      "primary": "#D2122E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "sun",
+    "overallBase": 78,
+    "custom": false
+  },
+  {
+    "id": 136,
+    "name": "PSV Eindhoven",
+    "country": "Holanda",
+    "city": "Eindhoven",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 136,
+    "colors": {
+      "primary": "#ED1C24",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 81,
+    "custom": false
+  },
+  {
+    "id": 137,
+    "name": "Feyenoord",
+    "country": "Holanda",
+    "city": "Roterdã",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 137,
+    "colors": {
+      "primary": "#E01C13",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 79,
+    "custom": false
+  },
+  {
+    "id": 138,
+    "name": "AZ Alkmaar",
+    "country": "Holanda",
+    "city": "Alkmaar",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 138,
+    "colors": {
+      "primary": "#D2122E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "star",
+    "overallBase": 72,
+    "custom": false
+  },
+  {
+    "id": 139,
+    "name": "FC Twente",
+    "country": "Holanda",
+    "city": "Enschede",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 139,
+    "colors": {
+      "primary": "#D2122E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
+    "overallBase": 71,
+    "custom": false
+  },
+  {
+    "id": 140,
+    "name": "FC Utrecht",
+    "country": "Holanda",
+    "city": "Utrecht",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 140,
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 68,
+    "custom": false
+  },
+  {
+    "id": 141,
+    "name": "Vitesse",
+    "country": "Holanda",
+    "city": "Arnhem",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 141,
+    "colors": {
+      "primary": "#FFD700",
+      "secondary": "#000000"
+    },
+    "emblem": "sun",
+    "overallBase": 62,
+    "custom": false
+  },
+  {
+    "id": 142,
+    "name": "Heerenveen",
+    "country": "Holanda",
+    "city": "Heerenveen",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 142,
+    "colors": {
+      "primary": "#0033A0",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 65,
+    "custom": false
+  },
+  {
+    "id": 143,
+    "name": "Sparta Rotterdam",
+    "country": "Holanda",
+    "city": "Roterdã",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 143,
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 63,
+    "custom": false
+  },
+  {
+    "id": 144,
+    "name": "Go Ahead Eagles",
+    "country": "Holanda",
+    "city": "Deventer",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 144,
+    "colors": {
+      "primary": "#FFD700",
+      "secondary": "#000000"
+    },
+    "emblem": "star",
+    "overallBase": 63,
+    "custom": false
+  },
+  {
+    "id": 145,
+    "name": "NEC Nijmegen",
+    "country": "Holanda",
+    "city": "Nijmegen",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 145,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#C8102E"
     },
     "emblem": "crest",
     "overallBase": 62,
+    "custom": false
+  },
+  {
+    "id": 146,
+    "name": "Fortuna Sittard",
+    "country": "Holanda",
+    "city": "Sittard",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 146,
+    "colors": {
+      "primary": "#FFD700",
+      "secondary": "#000000"
+    },
+    "emblem": "leaf",
+    "overallBase": 61,
+    "custom": false
+  },
+  {
+    "id": 147,
+    "name": "Heracles Almelo",
+    "country": "Holanda",
+    "city": "Almelo",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 147,
+    "colors": {
+      "primary": "#FFFFFF",
+      "secondary": "#000000"
+    },
+    "emblem": "sun",
+    "overallBase": 61,
+    "custom": false
+  },
+  {
+    "id": 148,
+    "name": "PEC Zwolle",
+    "country": "Holanda",
+    "city": "Zwolle",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 148,
+    "colors": {
+      "primary": "#0033A0",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 61,
+    "custom": false
+  },
+  {
+    "id": 149,
+    "name": "Willem II",
+    "country": "Holanda",
+    "city": "Tilburg",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 149,
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 60,
+    "custom": false
+  },
+  {
+    "id": 150,
+    "name": "NAC Breda",
+    "country": "Holanda",
+    "city": "Breda",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 150,
+    "colors": {
+      "primary": "#FFD700",
+      "secondary": "#000000"
+    },
+    "emblem": "star",
+    "overallBase": 60,
+    "custom": false
+  },
+  {
+    "id": 151,
+    "name": "Almere City",
+    "country": "Holanda",
+    "city": "Almere",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 151,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFD700"
+    },
+    "emblem": "crest",
+    "overallBase": 58,
+    "custom": false
+  },
+  {
+    "id": 152,
+    "name": "FC Groningen",
+    "country": "Holanda",
+    "city": "Groningen",
+    "league": "Eredivisie",
+    "leagueId": 8,
+    "stadiumId": 152,
+    "colors": {
+      "primary": "#00A65C",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 63,
+    "custom": false
+  },
+  {
+    "id": 153,
+    "name": "Brasil",
+    "country": "Brasil",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 153,
+    "colors": {
+      "primary": "#FFDF00",
+      "secondary": "#009C3B"
+    },
+    "emblem": "sun",
+    "overallBase": 90,
+    "custom": false
+  },
+  {
+    "id": 154,
+    "name": "Argentina",
+    "country": "Argentina",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 154,
+    "colors": {
+      "primary": "#75AADB",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 90,
+    "custom": false
+  },
+  {
+    "id": 155,
+    "name": "França",
+    "country": "França",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 155,
+    "colors": {
+      "primary": "#0055A4",
+      "secondary": "#EF4135"
+    },
+    "emblem": "shield",
+    "overallBase": 90,
+    "custom": false
+  },
+  {
+    "id": 156,
+    "name": "Inglaterra",
+    "country": "Inglaterra",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 156,
+    "colors": {
+      "primary": "#FFFFFF",
+      "secondary": "#CE1124"
+    },
+    "emblem": "star",
+    "overallBase": 89,
+    "custom": false
+  },
+  {
+    "id": 157,
+    "name": "Espanha",
+    "country": "Espanha",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 157,
+    "colors": {
+      "primary": "#AA151B",
+      "secondary": "#F1BF00"
+    },
+    "emblem": "crest",
+    "overallBase": 89,
+    "custom": false
+  },
+  {
+    "id": 158,
+    "name": "Alemanha",
+    "country": "Alemanha",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 158,
+    "colors": {
+      "primary": "#FFFFFF",
+      "secondary": "#000000"
+    },
+    "emblem": "leaf",
+    "overallBase": 87,
+    "custom": false
+  },
+  {
+    "id": 159,
+    "name": "Portugal",
+    "country": "Portugal",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 159,
+    "colors": {
+      "primary": "#FF0000",
+      "secondary": "#006600"
+    },
+    "emblem": "sun",
+    "overallBase": 87,
+    "custom": false
+  },
+  {
+    "id": 160,
+    "name": "Itália",
+    "country": "Itália",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 160,
+    "colors": {
+      "primary": "#0066CC",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 82,
+    "custom": false
+  },
+  {
+    "id": 161,
+    "name": "Holanda",
+    "country": "Holanda",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 161,
+    "colors": {
+      "primary": "#FF6600",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "shield",
+    "overallBase": 85,
+    "custom": false
+  },
+  {
+    "id": 162,
+    "name": "Bélgica",
+    "country": "Bélgica",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 162,
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FDDA24"
+    },
+    "emblem": "star",
+    "overallBase": 83,
+    "custom": false
+  },
+  {
+    "id": 163,
+    "name": "Croácia",
+    "country": "Croácia",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 163,
+    "colors": {
+      "primary": "#FF0000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
+    "overallBase": 83,
+    "custom": false
+  },
+  {
+    "id": 164,
+    "name": "Uruguai",
+    "country": "Uruguai",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 164,
+    "colors": {
+      "primary": "#5CB3FF",
+      "secondary": "#000000"
+    },
+    "emblem": "leaf",
+    "overallBase": 83,
+    "custom": false
+  },
+  {
+    "id": 165,
+    "name": "Colômbia",
+    "country": "Colômbia",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 165,
+    "colors": {
+      "primary": "#FCD116",
+      "secondary": "#003893"
+    },
+    "emblem": "sun",
+    "overallBase": 81,
+    "custom": false
+  },
+  {
+    "id": 166,
+    "name": "México",
+    "country": "México",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 166,
+    "colors": {
+      "primary": "#006847",
+      "secondary": "#CE1126"
+    },
+    "emblem": "wing",
+    "overallBase": 78,
+    "custom": false
+  },
+  {
+    "id": 167,
+    "name": "Estados Unidos",
+    "country": "Estados Unidos",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 167,
+    "colors": {
+      "primary": "#B22234",
+      "secondary": "#3C3B6E"
+    },
+    "emblem": "shield",
+    "overallBase": 78,
+    "custom": false
+  },
+  {
+    "id": 168,
+    "name": "Marrocos",
+    "country": "Marrocos",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 168,
+    "colors": {
+      "primary": "#C1272D",
+      "secondary": "#006233"
+    },
+    "emblem": "star",
+    "overallBase": 82,
+    "custom": false
+  },
+  {
+    "id": 169,
+    "name": "Senegal",
+    "country": "Senegal",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 169,
+    "colors": {
+      "primary": "#00853F",
+      "secondary": "#FDEF42"
+    },
+    "emblem": "crest",
+    "overallBase": 81,
+    "custom": false
+  },
+  {
+    "id": 170,
+    "name": "Nigéria",
+    "country": "Nigéria",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 170,
+    "colors": {
+      "primary": "#008751",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 79,
+    "custom": false
+  },
+  {
+    "id": 171,
+    "name": "Gana",
+    "country": "Gana",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 171,
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#FCD116"
+    },
+    "emblem": "sun",
+    "overallBase": 76,
+    "custom": false
+  },
+  {
+    "id": 172,
+    "name": "Japão",
+    "country": "Japão",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 172,
+    "colors": {
+      "primary": "#BC002D",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "wing",
+    "overallBase": 79,
+    "custom": false
+  },
+  {
+    "id": 173,
+    "name": "Coreia do Sul",
+    "country": "Coreia do Sul",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 173,
+    "colors": {
+      "primary": "#CD2E3A",
+      "secondary": "#0047A0"
+    },
+    "emblem": "shield",
+    "overallBase": 78,
+    "custom": false
+  },
+  {
+    "id": 174,
+    "name": "Austrália",
+    "country": "Austrália",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 174,
+    "colors": {
+      "primary": "#FFD700",
+      "secondary": "#00843D"
+    },
+    "emblem": "star",
+    "overallBase": 74,
+    "custom": false
+  },
+  {
+    "id": 175,
+    "name": "Canadá",
+    "country": "Canadá",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 175,
+    "colors": {
+      "primary": "#FF0000",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "crest",
+    "overallBase": 75,
+    "custom": false
+  },
+  {
+    "id": 176,
+    "name": "Dinamarca",
+    "country": "Dinamarca",
+    "city": "Seleção Nacional",
+    "league": "Seleções Internacionais",
+    "leagueId": 9,
+    "stadiumId": 176,
+    "colors": {
+      "primary": "#C60C30",
+      "secondary": "#FFFFFF"
+    },
+    "emblem": "leaf",
+    "overallBase": 79,
     "custom": false
   }
 ]

@@ -1,5 +1,6 @@
 import { MatchManager } from "../match/MatchManager.js";
 import { emblemSvg } from "./emblem.js";
+import { groupClubsByLeagueHtml } from "./clubOptions.js";
 
 export function initQuickMatch(router, game) {
   const el = document.getElementById("screen-quick-match");
@@ -28,11 +29,10 @@ export function initQuickMatch(router, game) {
   let speed = 1;
 
   function populateSelects() {
-    const clubs = [...game.database.getClubs()].sort((a, b) => a.name.localeCompare(b.name));
+    const clubs = [...game.database.getClubs()];
+    const optionsHtml = groupClubsByLeagueHtml(clubs);
     [homeSelect, awaySelect].forEach((select) => {
-      select.innerHTML = clubs
-        .map((c) => `<option value="${c.id}">${c.name} (${c.overallBase} OVR)</option>`)
-        .join("");
+      select.innerHTML = optionsHtml;
     });
     if (clubs.length > 1) awaySelect.selectedIndex = 1;
     updatePreviews();

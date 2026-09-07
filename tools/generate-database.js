@@ -1,228 +1,205 @@
 /**
  * Gerador do banco de dados do FutebolLand.
+ *
  * Roda uma vez com `node tools/generate-database.js` e escreve os arquivos
- * JSON em /database. Usa um RNG com seed fixa para o resultado ser
- * reproduzível (mesma "base de dados" toda vez que rodar de novo).
+ * JSON em /database, a partir dos dados "reais" (ligas, clubes, seleções e
+ * jogadores conhecidos) definidos em `tools/real-world-data.js`. Usa um RNG
+ * com seed fixa pra completar o elenco de cada clube (reservas gerados) e
+ * variar levemente os atributos — o resultado é reproduzível.
  */
 const fs = require("fs");
 const path = require("path");
+const core = require("./db-core");
+const { LEAGUE_DEFS, NATIONAL_TEAM_LEAGUE } = require("./real-world-data");
 
-function mulberry32(seed) {
-  return function () {
-    seed |= 0;
-    seed = (seed + 0x6d2b79f5) | 0;
-    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
+const { POSITION_MIN, POSITION_ORDER, statsForPosition, parseReal, uniqueGeneratedName, randInt, clamp } = core;
 
-const rng = mulberry32(20240613);
-const rand = () => rng();
-const randInt = (min, max) => Math.floor(rand() * (max - min + 1)) + min;
-const pick = (arr) => arr[randInt(0, arr.length - 1)];
-const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+const countries = core.COUNTRIES_UNIQUE;
+const countryNames = new Set(countries.map((c) => c.name));
 
-const COUNTRIES = [
-  { id: 1, name: "Brasil", continent: "América do Sul", fifa: true },
-  { id: 2, name: "Argentina", continent: "América do Sul", fifa: true },
-  { id: 3, name: "Espanha", continent: "Europa", fifa: true },
-  { id: 4, name: "Inglaterra", continent: "Europa", fifa: true },
-  { id: 5, name: "Alemanha", continent: "Europa", fifa: true },
-  { id: 6, name: "França", continent: "Europa", fifa: true },
-  { id: 7, name: "Itália", continent: "Europa", fifa: true },
-  { id: 8, name: "Portugal", continent: "Europa", fifa: true },
-];
-
-const CLUB_DEFS = [
-  { name: "Porto Novo FC", city: "Porto Novo", primary: "#0d47a1", secondary: "#ffffff", emblem: "shield", base: 82 },
-  { name: "Estrela do Sul EC", city: "Baía Grande", primary: "#1b5e20", secondary: "#ffd600", emblem: "star", base: 78 },
-  { name: "Atlético Litoral", city: "Litoral Novo", primary: "#b71c1c", secondary: "#000000", emblem: "crest", base: 75 },
-  { name: "Coração Verde FC", city: "Serra Alta", primary: "#004d40", secondary: "#c8e6c9", emblem: "leaf", base: 73 },
-  { name: "União Dourada AC", city: "Vale Dourado", primary: "#e65100", secondary: "#212121", emblem: "sun", base: 70 },
-  { name: "Real Cerrado FC", city: "Cerrado Alto", primary: "#4a148c", secondary: "#ffffff", emblem: "shield", base: 68 },
-  { name: "Fênix Atlântico", city: "Costa Azul", primary: "#01579b", secondary: "#ffab00", emblem: "wing", base: 65 },
-  { name: "Leões do Vale", city: "Vale Verde", primary: "#f9a825", secondary: "#1b1b1b", emblem: "crest", base: 62 },
-];
-
-const FIRST_NAMES = [
-  "João", "Pedro", "Lucas", "Gabriel", "Matheus", "Rafael", "Bruno", "Diego",
-  "Thiago", "Felipe", "Gustavo", "Vinícius", "Rodrigo", "Marcelo", "André",
-  "Caio", "Daniel", "Eduardo", "Fábio", "Guilherme", "Henrique", "Igor",
-  "Júlio", "Leandro", "Márcio", "Nathan", "Otávio", "Paulo", "Renato",
-  "Samuel", "Tiago", "Ubirajara", "Valdir", "Wesley", "Yago", "Alan",
-];
-const LAST_NAMES = [
-  "Silva", "Santos", "Oliveira", "Souza", "Pereira", "Costa", "Rodrigues",
-  "Almeida", "Nascimento", "Carvalho", "Araújo", "Ribeiro", "Ferreira",
-  "Barbosa", "Cardoso", "Correia", "Dias", "Farias", "Gomes", "Lima",
-  "Machado", "Nogueira", "Pinto", "Queiroz", "Rezende", "Teixeira",
-  "Vieira", "Xavier", "Amaral", "Brandão",
-];
-
-const POSITION_PLAN = [
-  "GOL", "GOL",
-  "ZAG", "ZAG", "ZAG",
-  "LAT", "LAT",
-  "VOL", "VOL",
-  "MEI", "MEI", "MEI",
-  "ATA", "ATA", "ATA", "ATA",
-];
-
-function statsForPosition(position, overall) {
-  const noise = () => randInt(-6, 6);
-  const base = overall;
-  switch (position) {
-    case "GOL":
-      return {
-        pace: clamp(base - 20 + noise(), 30, 90),
-        shooting: clamp(base - 45 + noise(), 10, 60),
-        passing: clamp(base - 15 + noise(), 30, 85),
-        dribbling: clamp(base - 25 + noise(), 20, 75),
-        defending: clamp(base - 5 + noise(), 40, 95),
-        physical: clamp(base + noise(), 40, 95),
-      };
-    case "ZAG":
-      return {
-        pace: clamp(base - 10 + noise(), 35, 88),
-        shooting: clamp(base - 25 + noise(), 20, 70),
-        passing: clamp(base - 8 + noise(), 35, 88),
-        dribbling: clamp(base - 15 + noise(), 25, 80),
-        defending: clamp(base + 6 + noise(), 45, 96),
-        physical: clamp(base + 8 + noise(), 45, 96),
-      };
-    case "LAT":
-      return {
-        pace: clamp(base + 6 + noise(), 45, 95),
-        shooting: clamp(base - 15 + noise(), 25, 78),
-        passing: clamp(base + 2 + noise(), 40, 90),
-        dribbling: clamp(base + noise(), 35, 88),
-        defending: clamp(base + 2 + noise(), 40, 90),
-        physical: clamp(base + noise(), 40, 90),
-      };
-    case "VOL":
-      return {
-        pace: clamp(base - 4 + noise(), 35, 88),
-        shooting: clamp(base - 10 + noise(), 30, 80),
-        passing: clamp(base + 6 + noise(), 40, 92),
-        dribbling: clamp(base + noise(), 35, 88),
-        defending: clamp(base + 8 + noise(), 45, 93),
-        physical: clamp(base + 6 + noise(), 45, 93),
-      };
-    case "MEI":
-      return {
-        pace: clamp(base + noise(), 40, 92),
-        shooting: clamp(base + 2 + noise(), 35, 90),
-        passing: clamp(base + 10 + noise(), 45, 96),
-        dribbling: clamp(base + 8 + noise(), 45, 96),
-        defending: clamp(base - 12 + noise(), 20, 75),
-        physical: clamp(base - 4 + noise(), 35, 85),
-      };
-    case "ATA":
-    default:
-      return {
-        pace: clamp(base + 8 + noise(), 45, 97),
-        shooting: clamp(base + 10 + noise(), 45, 97),
-        passing: clamp(base - 4 + noise(), 30, 85),
-        dribbling: clamp(base + 6 + noise(), 40, 95),
-        defending: clamp(base - 25 + noise(), 15, 65),
-        physical: clamp(base + noise(), 35, 90),
-      };
-  }
-}
-
-const usedNames = new Set();
-function uniqueName() {
-  let name;
-  let guard = 0;
-  do {
-    name = `${pick(FIRST_NAMES)} ${pick(LAST_NAMES)}`;
-    guard++;
-  } while (usedNames.has(name) && guard < 50);
-  usedNames.add(name);
-  return name;
-}
-
-const leagues = [
-  {
-    id: 1,
-    name: "Campeonato Brasileiro Série A",
-    country: "Brasil",
-    division: 1,
-    clubIds: CLUB_DEFS.map((_, i) => i + 1),
-  },
-];
-
+const leagues = [];
 const clubs = [];
 const stadiums = [];
 const players = [];
-let playerId = 1;
-
-CLUB_DEFS.forEach((def, index) => {
-  const clubId = index + 1;
-  const stadiumId = clubId;
-
-  clubs.push({
-    id: clubId,
-    name: def.name,
-    country: "Brasil",
-    city: def.city,
-    league: leagues[0].name,
-    leagueId: leagues[0].id,
-    stadiumId,
-    colors: { primary: def.primary, secondary: def.secondary },
-    emblem: def.emblem,
-    overallBase: def.base,
-    custom: false,
-  });
-
-  stadiums.push({
-    id: stadiumId,
-    name: `Arena ${def.city}`,
-    capacity: randInt(18, 65) * 1000,
-    country: "Brasil",
-    clubId,
-  });
-
-  POSITION_PLAN.forEach((position) => {
-    const variance = randInt(-6, 6);
-    const overall = clamp(def.base + variance, 45, 92);
-    players.push({
-      id: playerId++,
-      name: uniqueName(),
-      age: randInt(18, 36),
-      country: "Brasil",
-      clubId,
-      position,
-      overall,
-      ...statsForPosition(position, overall),
-    });
-  });
-});
-
-const competitions = [
-  {
-    id: 1,
-    name: "Copa FutebolLand",
-    type: "Copa",
-    country: "Brasil",
-    clubIds: clubs.map((c) => c.id),
-  },
-  {
-    id: 2,
-    name: leagues[0].name,
-    type: "Liga",
-    country: "Brasil",
-    clubIds: leagues[0].clubIds,
-  },
-];
-
 const referees = [
   { id: 1, name: "Márcio Andrade", country: "Brasil", strictness: "Moderado" },
   { id: 2, name: "Fernanda Kist", country: "Brasil", strictness: "Rigoroso" },
   { id: 3, name: "Otávio Prado", country: "Brasil", strictness: "Tolerante" },
   { id: 4, name: "Luana Beckert", country: "Brasil", strictness: "Moderado" },
+  { id: 5, name: "Michael Oliver", country: "Inglaterra", strictness: "Rigoroso" },
+  { id: 6, name: "Clément Turpin", country: "França", strictness: "Moderado" },
+  { id: 7, name: "Daniele Orsato", country: "Itália", strictness: "Rigoroso" },
+  { id: 8, name: "Felix Zwayer", country: "Alemanha", strictness: "Moderado" },
+  { id: 9, name: "Jesús Gil Manzano", country: "Espanha", strictness: "Tolerante" },
+  { id: 10, name: "Fábio Veríssimo", country: "Portugal", strictness: "Moderado" },
 ];
+
+let leagueId = 1;
+let clubId = 1;
+let stadiumId = 1;
+let playerId = 1;
+
+function buildSquad(def, leagueCountry, forClubId) {
+  const country = def.country || leagueCountry;
+  const realByPosition = {};
+  POSITION_ORDER.forEach((pos) => (realByPosition[pos] = []));
+  parseReal(def.real).forEach((p) => {
+    if (!realByPosition[p.position]) realByPosition[p.position] = [];
+    realByPosition[p.position].push(p);
+  });
+
+  const squad = [];
+  POSITION_ORDER.forEach((position) => {
+    const real = realByPosition[position] || [];
+    const target = Math.max(POSITION_MIN[position], real.length);
+
+    real.forEach((p, index) => {
+      const tierBonus = index === 0 ? 9 : index === 1 ? 5 : index === 2 ? 2 : 0;
+      const overall = clamp(def.base + tierBonus + randInt(-3, 3), 50, 99);
+      const playerCountry = countryNames.has(p.country) ? p.country : country;
+      squad.push({
+        id: playerId++,
+        name: p.name,
+        age: p.age || randInt(20, 34),
+        country: playerCountry,
+        clubId: forClubId,
+        position,
+        overall,
+        real: true,
+        ...statsForPosition(position, overall),
+      });
+    });
+
+    for (let i = real.length; i < target; i++) {
+      const overall = clamp(def.base - 8 + randInt(-6, 6), 45, 90);
+      squad.push({
+        id: playerId++,
+        name: uniqueGeneratedName(country),
+        age: randInt(18, 34),
+        country,
+        clubId: forClubId,
+        position,
+        overall,
+        generated: true,
+        ...statsForPosition(position, overall),
+      });
+    }
+  });
+
+  return squad;
+}
+
+function addLeague(def) {
+  const league = {
+    id: leagueId++,
+    name: def.name,
+    country: def.country,
+    division: 1,
+    clubIds: [],
+  };
+  leagues.push(league);
+
+  def.clubs.forEach((clubDef) => {
+    const id = clubId++;
+    league.clubIds.push(id);
+
+    clubs.push({
+      id,
+      name: clubDef.n,
+      country: clubDef.country || def.country,
+      city: clubDef.city,
+      league: league.name,
+      leagueId: league.id,
+      stadiumId,
+      colors: { primary: clubDef.p, secondary: clubDef.s },
+      emblem: ["shield", "star", "crest", "leaf", "sun", "wing"][clubId % 6],
+      overallBase: clubDef.base,
+      custom: false,
+    });
+
+    stadiums.push({
+      id: stadiumId,
+      name: clubDef.stadium,
+      capacity: randInt(12, 85) * 1000,
+      country: clubDef.country || def.country,
+      clubId: id,
+    });
+    stadiumId++;
+
+    const squad = buildSquad(clubDef, def.country, id);
+    squad.forEach((p) => players.push(p));
+  });
+
+  return league;
+}
+
+LEAGUE_DEFS.forEach((def) => addLeague(def));
+const nationalLeague = addLeague(NATIONAL_TEAM_LEAGUE);
+
+const competitions = [];
+let competitionId = 1;
+
+LEAGUE_DEFS.forEach((def) => {
+  const league = leagues.find((l) => l.name === def.name);
+  competitions.push({
+    id: competitionId++,
+    name: league.name,
+    type: "Liga",
+    country: def.country,
+    clubIds: [...league.clubIds],
+  });
+  if (def.cup) {
+    competitions.push({
+      id: competitionId++,
+      name: def.cup,
+      type: "Copa",
+      country: def.country,
+      clubIds: [...league.clubIds],
+    });
+  }
+});
+
+function topClubIds(leagueName, count) {
+  const league = leagues.find((l) => l.name === leagueName);
+  if (!league) return [];
+  return [...league.clubIds]
+    .map((id) => clubs.find((c) => c.id === id))
+    .sort((a, b) => b.overallBase - a.overallBase)
+    .slice(0, count)
+    .map((c) => c.id);
+}
+
+competitions.push({
+  id: competitionId++,
+  name: "Liga dos Campeões",
+  type: "Continental",
+  country: "Europa",
+  clubIds: [
+    ...topClubIds("Premier League", 4),
+    ...topClubIds("La Liga", 4),
+    ...topClubIds("Serie A", 4),
+    ...topClubIds("Bundesliga", 4),
+    ...topClubIds("Ligue 1", 3),
+    ...topClubIds("Liga Portugal", 2),
+    ...topClubIds("Eredivisie", 2),
+  ],
+});
+
+competitions.push({
+  id: competitionId++,
+  name: "Copa Libertadores",
+  type: "Continental",
+  country: "América do Sul",
+  clubIds: topClubIds("Campeonato Brasileiro Série A", 8),
+});
+
+competitions.push({
+  id: competitionId++,
+  name: "Copa do Mundo FIFA",
+  type: "Seleções",
+  country: "Internacional",
+  clubIds: [...nationalLeague.clubIds],
+});
 
 const outDir = path.join(__dirname, "..", "database");
 fs.mkdirSync(outDir, { recursive: true });
@@ -232,7 +209,7 @@ function write(file, data) {
   console.log(`escrito database/${file} (${Array.isArray(data) ? data.length : 1} registros)`);
 }
 
-write("countries.json", COUNTRIES);
+write("countries.json", countries);
 write("leagues.json", leagues);
 write("clubs.json", clubs);
 write("players.json", players);

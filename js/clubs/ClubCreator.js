@@ -67,7 +67,7 @@ export class ClubCreator {
     return EMBLEMS;
   }
 
-  generateSquad(clubId, overallBase) {
+  generateSquad(clubId, overallBase, country) {
     const players = [];
     let nextId = this.database.nextPlayerId();
     const usedNames = new Set();
@@ -88,7 +88,7 @@ export class ClubCreator {
         id: nextId++,
         name: uniqueName(),
         age: randInt(18, 36),
-        country: "Brasil",
+        country: country || "Brasil",
         clubId,
         position,
         overall,
@@ -114,7 +114,7 @@ export class ClubCreator {
       overallBase,
       custom: true,
     };
-    const players = this.generateSquad(clubId, overallBase);
+    const players = this.generateSquad(clubId, overallBase, country);
 
     const stadium = {
       id: clubId,
