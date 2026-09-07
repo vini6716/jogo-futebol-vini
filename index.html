@@ -147,6 +147,9 @@
         <label>Escolha seu clube
           <select id="career-club"></select>
         </label>
+        <label>Campeonato
+          <select id="career-competition"></select>
+        </label>
         <label>Nome do técnico
           <input id="career-manager-name" type="text" maxlength="24" placeholder="Seu nome" />
         </label>
@@ -167,18 +170,30 @@
           <button id="career-back-dashboard" class="btn-secondary">Voltar ao Menu</button>
         </div>
 
-        <h3>Classificação</h3>
-        <div class="table-scroll">
-          <table class="standings-table">
-            <thead>
-              <tr><th>#</th><th>Clube</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th><th>Pts</th></tr>
-            </thead>
-            <tbody id="career-standings-body"></tbody>
-          </table>
+        <div id="career-league-view">
+          <h3>Classificação</h3>
+          <div class="table-scroll">
+            <table class="standings-table">
+              <thead>
+                <tr><th>#</th><th>Clube</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th><th>Pts</th></tr>
+              </thead>
+              <tbody id="career-standings-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="career-groups-view" hidden>
+          <h3>Fase de Grupos</h3>
+          <div id="career-groups" class="career-groups"></div>
+        </div>
+
+        <div id="career-bracket-view" hidden>
+          <h3 id="career-bracket-title">Mata-mata</h3>
+          <div id="career-bracket" class="career-bracket"></div>
         </div>
 
         <div class="career-columns">
-          <div>
+          <div id="career-history-col">
             <h3>Últimas rodadas</h3>
             <div id="career-history" class="career-history"></div>
           </div>

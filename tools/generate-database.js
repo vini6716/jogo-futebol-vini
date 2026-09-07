@@ -89,7 +89,7 @@ function buildSquad(def, leagueCountry, forClubId) {
   return squad;
 }
 
-function addLeague(def) {
+function addLeague(def, isNationalTeams) {
   const league = {
     id: leagueId++,
     name: def.name,
@@ -115,6 +115,7 @@ function addLeague(def) {
       emblem: ["shield", "star", "crest", "leaf", "sun", "wing"][clubId % 6],
       overallBase: clubDef.base,
       custom: false,
+      nationalTeam: !!isNationalTeams,
     });
 
     stadiums.push({
@@ -133,8 +134,8 @@ function addLeague(def) {
   return league;
 }
 
-LEAGUE_DEFS.forEach((def) => addLeague(def));
-const nationalLeague = addLeague(NATIONAL_TEAM_LEAGUE);
+LEAGUE_DEFS.forEach((def) => addLeague(def, false));
+const nationalLeague = addLeague(NATIONAL_TEAM_LEAGUE, true);
 
 const competitions = [];
 let competitionId = 1;
@@ -159,15 +160,32 @@ LEAGUE_DEFS.forEach((def) => {
   }
 });
 
-function topClubIds(leagueName, count) {
-  const league = leagues.find((l) => l.name === leagueName);
-  if (!league) return [];
-  return [...league.clubIds]
+function clubsInLeagues(names) {
+  return leagues.filter((l) => names.includes(l.name)).flatMap((l) => l.clubIds);
+}
+
+function topFrom(clubIdPool, count) {
+  return [...clubIdPool]
     .map((id) => clubs.find((c) => c.id === id))
     .sort((a, b) => b.overallBase - a.overallBase)
     .slice(0, count)
     .map((c) => c.id);
 }
+
+function topClubIds(leagueName, count) {
+  const league = leagues.find((l) => l.name === leagueName);
+  if (!league) return [];
+  return topFrom(league.clubIds, count);
+}
+
+// As competições abaixo (com `format`/`eligibility`) são as jogáveis no Modo
+// Carreira, além da liga do próprio clube:
+// - "mata-mata": chaveamento eliminatório simples (com "byes" se preciso).
+// - "grupos-mata-mata": fase de grupos (pontos corridos) + mata-mata com os
+//   classificados.
+// `eligibility` decide quais clubes o jogador pode usar pra entrar nela:
+// um país (ex.: "Brasil"), "selecao" (só seleções), "clube" (qualquer clube
+// que não seja seleção) ou "qualquer" (literalmente qualquer um).
 
 competitions.push({
   id: competitionId++,
@@ -187,10 +205,49 @@ competitions.push({
 
 competitions.push({
   id: competitionId++,
+  name: "Copa do Brasil",
+  type: "Copa",
+  country: "Brasil",
+  format: "mata-mata",
+  eligibility: "Brasil",
+  clubIds: topFrom(
+    clubsInLeagues([
+      "Campeonato Brasileiro Série A",
+      "Campeonato Brasileiro Série B",
+      "Campeonato Brasileiro Série C",
+      "Campeonato Brasileiro Série D",
+    ]),
+    32
+  ),
+});
+
+competitions.push({
+  id: competitionId++,
   name: "Copa Libertadores",
   type: "Continental",
   country: "América do Sul",
-  clubIds: topClubIds("Campeonato Brasileiro Série A", 8),
+  format: "mata-mata",
+  eligibility: "Brasil",
+  clubIds: topClubIds("Campeonato Brasileiro Série A", 16),
+});
+
+competitions.push({
+  id: competitionId++,
+  name: "Mundial de Clubes",
+  type: "Continental",
+  country: "Internacional",
+  format: "mata-mata",
+  eligibility: "clube",
+  clubIds: [
+    ...topClubIds("Premier League", 5),
+    ...topClubIds("La Liga", 5),
+    ...topClubIds("Serie A", 5),
+    ...topClubIds("Bundesliga", 5),
+    ...topClubIds("Ligue 1", 5),
+    ...topClubIds("Campeonato Brasileiro Série A", 4),
+    ...topClubIds("Liga Portugal", 2),
+    ...topClubIds("Eredivisie", 1),
+  ],
 });
 
 competitions.push({
@@ -198,7 +255,22 @@ competitions.push({
   name: "Copa do Mundo FIFA",
   type: "Seleções",
   country: "Internacional",
+  format: "grupos-mata-mata",
+  eligibility: "selecao",
   clubIds: [...nationalLeague.clubIds],
+});
+
+competitions.push({
+  id: competitionId++,
+  name: "Mundo Livre",
+  type: "Amistoso",
+  country: "Internacional",
+  format: "mata-mata",
+  eligibility: "qualquer",
+  clubIds: topFrom(
+    clubs.filter((c) => c.leagueId !== nationalLeague.id).map((c) => c.id),
+    24
+  ),
 });
 
 const outDir = path.join(__dirname, "..", "database");

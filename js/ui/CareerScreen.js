@@ -9,6 +9,7 @@ export function initCareer(router, game) {
   const matchEl = el.querySelector(".career-match");
 
   const clubSelect = el.querySelector("#career-club");
+  const competitionSelect = el.querySelector("#career-competition");
   const nameInput = el.querySelector("#career-manager-name");
   const startBtn = el.querySelector("#career-start");
   const backFromSetup = el.querySelector("#career-back-setup");
@@ -18,7 +19,14 @@ export function initCareer(router, game) {
   const moneyInfo = el.querySelector("#career-money-info");
   const fixtureInfo = el.querySelector("#career-fixture-info");
   const playRoundBtn = el.querySelector("#career-play-round");
+  const leagueView = el.querySelector("#career-league-view");
   const standingsBody = el.querySelector("#career-standings-body");
+  const groupsView = el.querySelector("#career-groups-view");
+  const groupsEl = el.querySelector("#career-groups");
+  const bracketView = el.querySelector("#career-bracket-view");
+  const bracketTitleEl = el.querySelector("#career-bracket-title");
+  const bracketEl = el.querySelector("#career-bracket");
+  const historyCol = el.querySelector("#career-history-col");
   const historyEl = el.querySelector("#career-history");
   const trophiesEl = el.querySelector("#career-trophies");
   const newCareerBtn = el.querySelector("#career-new");
@@ -39,7 +47,22 @@ export function initCareer(router, game) {
   function populateClubSelect() {
     const clubs = [...game.database.getClubs()];
     clubSelect.innerHTML = groupClubsByLeagueHtml(clubs);
+    populateCompetitionSelect();
   }
+
+  function populateCompetitionSelect() {
+    const clubId = Number(clubSelect.value);
+    const club = game.database.getClub(clubId);
+    const league = club && club.leagueId != null ? game.database.getLeague(club.leagueId) : null;
+    const ligaOption = `<option value="">Liga — ${league ? league.name : "Mundo Livre"}</option>`;
+    const cupOptions = game.career
+      .getAvailableCompetitions(clubId)
+      .map((c) => `<option value="${c.name}">${c.name}${c.format === "grupos-mata-mata" ? " (grupos + mata-mata)" : " (mata-mata)"}</option>`)
+      .join("");
+    competitionSelect.innerHTML = ligaOption + cupOptions;
+  }
+
+  clubSelect.addEventListener("change", populateCompetitionSelect);
 
   function showSetup() {
     setupEl.hidden = false;
@@ -57,13 +80,26 @@ export function initCareer(router, game) {
   function renderDashboard() {
     const state = game.career.state;
     const club = game.database.getClub(state.userClubId);
-    clubHeader.innerHTML = `${emblemSvg(club, 56)} <div><strong>${club.name}</strong><br><span class="muted">${state.leagueName || "Liga Livre"} · Técnico: ${state.managerName}</span></div>`;
-    seasonInfo.textContent = `Temporada ${state.season} · Rodada ${Math.min(state.round + 1, game.career.totalRounds)} de ${game.career.totalRounds}`;
+    const subtitle = state.mode === "copa" ? state.competitionName : state.leagueName || "Mundo Livre";
+    clubHeader.innerHTML = `${emblemSvg(club, 56)} <div><strong>${club.name}</strong><br><span class="muted">${subtitle} · Técnico: ${state.managerName}</span></div>`;
+    seasonInfo.textContent = `Temporada ${state.season} · ${game.career.currentRoundLabel}`;
     moneyInfo.textContent = `Caixa: R$ ${state.money.toLocaleString("pt-BR")}`;
 
     if (game.career.isSeasonOver()) {
-      fixtureInfo.textContent = "Temporada encerrada!";
-      playRoundBtn.textContent = "Iniciar Nova Temporada";
+      if (state.mode === "copa") {
+        const lastTrophy = state.trophies[state.trophies.length - 1];
+        if (state.champion) {
+          fixtureInfo.textContent = `🏆 Campeão da ${state.competitionName}!`;
+        } else if (lastTrophy && lastTrophy.runnerUp) {
+          fixtureInfo.textContent = `🥈 Vice-campeão da ${state.competitionName} — perdeu na final.`;
+        } else {
+          fixtureInfo.textContent = `Eliminado(a) na ${lastTrophy?.stage || "competição"}.`;
+        }
+        playRoundBtn.textContent = "Nova Edição";
+      } else {
+        fixtureInfo.textContent = "Temporada encerrada!";
+        playRoundBtn.textContent = "Iniciar Nova Temporada";
+      }
     } else {
       const fixture = game.career.getUserFixtureThisRound();
       if (fixture) {
@@ -77,8 +113,19 @@ export function initCareer(router, game) {
       playRoundBtn.textContent = "Jogar Rodada";
     }
 
-    renderStandings();
-    renderHistory();
+    leagueView.hidden = state.mode !== "liga";
+    groupsView.hidden = !(state.mode === "copa" && state.stage === "grupos");
+    bracketView.hidden = !(state.mode === "copa" && state.stage === "mata-mata");
+    historyCol.hidden = state.mode !== "liga";
+
+    if (state.mode === "liga") {
+      renderStandings();
+      renderHistory();
+    } else if (state.stage === "grupos") {
+      renderGroups();
+    } else {
+      renderBracket();
+    }
     renderTrophies();
   }
 
@@ -100,6 +147,68 @@ export function initCareer(router, game) {
           <td>${row.gp - row.gc}</td>
           <td><strong>${row.pts}</strong></td>
         </tr>`;
+      })
+      .join("");
+  }
+
+  function renderGroups() {
+    const state = game.career.state;
+    groupsEl.innerHTML = state.groups
+      .map((g, gi) => {
+        const rows = game.career
+          .getGroupStandings(gi)
+          .map((row, i) => {
+            const club = game.database.getClub(row.clubId);
+            const isUser = row.clubId === state.userClubId;
+            const qualifying = i < 2 ? "is-qualifying" : "";
+            return `<tr class="${isUser ? "is-user" : ""} ${qualifying}">
+              <td>${i + 1}</td>
+              <td>${club ? club.name : "?"}</td>
+              <td>${row.j}</td>
+              <td>${row.v}</td>
+              <td>${row.e}</td>
+              <td>${row.d}</td>
+              <td>${row.gp - row.gc}</td>
+              <td><strong>${row.pts}</strong></td>
+            </tr>`;
+          })
+          .join("");
+        return `<div class="career-group">
+          <h4>${g.name}</h4>
+          <div class="table-scroll">
+            <table class="standings-table standings-table-compact">
+              <thead><tr><th>#</th><th>Clube</th><th>J</th><th>V</th><th>E</th><th>D</th><th>SG</th><th>Pts</th></tr></thead>
+              <tbody>${rows}</tbody>
+            </table>
+          </div>
+        </div>`;
+      })
+      .join("");
+  }
+
+  function renderBracket() {
+    const state = game.career.state;
+    bracketTitleEl.textContent = `${state.competitionName} — ${game.career.currentRoundLabel}`;
+    bracketEl.innerHTML = state.bracket
+      .map((round, ri) => {
+        const ties = round
+          .map((tie) => {
+            const home = tie.homeId != null ? game.database.getClub(tie.homeId) : null;
+            const away = tie.awayId != null ? game.database.getClub(tie.awayId) : null;
+            const isUserTie = tie.homeId === state.userClubId || tie.awayId === state.userClubId;
+            const score = tie.played
+              ? tie.bye
+                ? "de bye"
+                : `${tie.homeGoals} x ${tie.awayGoals}${tie.penalties ? " (pên.)" : ""}`
+              : "a definir";
+            return `<div class="bracket-tie ${isUserTie ? "is-user" : ""}">
+              <span class="${tie.winnerId === tie.homeId ? "is-winner" : ""}">${home ? home.name : "—"}</span>
+              <span class="bracket-score">${score}</span>
+              <span class="${tie.winnerId === tie.awayId ? "is-winner" : ""}">${away ? away.name : "—"}</span>
+            </div>`;
+          })
+          .join("");
+        return `<div class="bracket-round"><h4>${state.roundNames[ri]}</h4>${ties}</div>`;
       })
       .join("");
   }
@@ -131,12 +240,18 @@ export function initCareer(router, game) {
       return;
     }
     trophiesEl.innerHTML = trophies
-      .map(
-        (t) =>
-          `<div class="trophy-row">${t.champion ? "🏆" : "🎖️"} Temporada ${t.season} — ${t.competition}: ${
-            t.champion ? "Campeão!" : `${t.position}º lugar`
-          }</div>`
-      )
+      .map((t) => {
+        if (t.champion) {
+          return `<div class="trophy-row">🏆 Temporada ${t.season} — ${t.competition}: Campeão!</div>`;
+        }
+        if (t.runnerUp) {
+          return `<div class="trophy-row">🥈 Temporada ${t.season} — ${t.competition}: Vice-campeão</div>`;
+        }
+        if (t.eliminated) {
+          return `<div class="trophy-row">❌ Temporada ${t.season} — ${t.competition}: eliminado(a) na ${t.stage}</div>`;
+        }
+        return `<div class="trophy-row">🎖️ Temporada ${t.season} — ${t.competition}: ${t.position}º lugar</div>`;
+      })
       .join("");
   }
 
@@ -240,7 +355,8 @@ export function initCareer(router, game) {
     game.audio.click();
     const clubId = Number(clubSelect.value);
     const managerName = nameInput.value.trim() || "Técnico";
-    game.career.startNewCareer(clubId, managerName);
+    const competitionName = competitionSelect.value || undefined;
+    game.career.startNewCareer(clubId, managerName, competitionName);
     showDashboard();
   });
 

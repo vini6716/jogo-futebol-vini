@@ -1065,170 +1065,562 @@
   },
   {
     "id": 153,
-    "name": "Maracanã",
+    "name": "Estádio Onésio Brasileiro Alvarenga",
     "capacity": 38000,
     "country": "Brasil",
     "clubId": 153
   },
   {
     "id": 154,
-    "name": "Estadio Monumental",
-    "capacity": 41000,
-    "country": "Argentina",
+    "name": "Couto Pereira",
+    "capacity": 21000,
+    "country": "Brasil",
     "clubId": 154
   },
   {
     "id": 155,
-    "name": "Stade de France",
-    "capacity": 85000,
-    "country": "França",
+    "name": "Ressacada",
+    "capacity": 65000,
+    "country": "Brasil",
     "clubId": 155
   },
   {
     "id": 156,
-    "name": "Wembley Stadium",
-    "capacity": 43000,
-    "country": "Inglaterra",
+    "name": "Arena Condá",
+    "capacity": 25000,
+    "country": "Brasil",
     "clubId": 156
   },
   {
     "id": 157,
-    "name": "Santiago Bernabéu",
-    "capacity": 20000,
-    "country": "Espanha",
+    "name": "Brinco de Ouro da Princesa",
+    "capacity": 70000,
+    "country": "Brasil",
     "clubId": 157
   },
   {
     "id": 158,
-    "name": "Allianz Arena",
-    "capacity": 61000,
-    "country": "Alemanha",
+    "name": "Moisés Lucarelli",
+    "capacity": 49000,
+    "country": "Brasil",
     "clubId": 158
   },
   {
     "id": 159,
-    "name": "Estádio da Luz",
-    "capacity": 54000,
-    "country": "Portugal",
+    "name": "Jorge Ismael de Biasi",
+    "capacity": 61000,
+    "country": "Brasil",
     "clubId": 159
   },
   {
     "id": 160,
-    "name": "Stadio Olímpico",
-    "capacity": 66000,
-    "country": "Itália",
+    "name": "Arena da Amazônia",
+    "capacity": 13000,
+    "country": "Brasil",
     "clubId": 160
   },
   {
     "id": 161,
-    "name": "Johan Cruyff Arena",
-    "capacity": 84000,
-    "country": "Holanda",
+    "name": "Germano Krüger",
+    "capacity": 75000,
+    "country": "Brasil",
     "clubId": 161
   },
   {
     "id": 162,
-    "name": "Estádio Rei Balduíno",
-    "capacity": 38000,
-    "country": "Bélgica",
+    "name": "Rei Pelé",
+    "capacity": 70000,
+    "country": "Brasil",
     "clubId": 162
   },
   {
     "id": 163,
-    "name": "Estádio Maksimir",
-    "capacity": 77000,
-    "country": "Croácia",
+    "name": "Castelão",
+    "capacity": 41000,
+    "country": "Brasil",
     "clubId": 163
   },
   {
     "id": 164,
-    "name": "Estádio Centenário",
-    "capacity": 74000,
-    "country": "Uruguai",
+    "name": "Ilha do Retiro",
+    "capacity": 30000,
+    "country": "Brasil",
     "clubId": 164
   },
   {
     "id": 165,
-    "name": "Estádio Metropolitano",
-    "capacity": 48000,
-    "country": "Colômbia",
+    "name": "Serra Dourada",
+    "capacity": 60000,
+    "country": "Brasil",
     "clubId": 165
   },
   {
     "id": 166,
-    "name": "Estádio Azteca",
-    "capacity": 61000,
-    "country": "México",
+    "name": "Santa Cruz",
+    "capacity": 73000,
+    "country": "Brasil",
     "clubId": 166
   },
   {
     "id": 167,
-    "name": "Estádio Azteca",
-    "capacity": 71000,
-    "country": "Estados Unidos",
+    "name": "Independência",
+    "capacity": 61000,
+    "country": "Brasil",
     "clubId": 167
   },
   {
     "id": 168,
-    "name": "Estádio Mohammed V",
-    "capacity": 66000,
-    "country": "Marrocos",
+    "name": "Curuzu",
+    "capacity": 38000,
+    "country": "Brasil",
     "clubId": 168
   },
   {
     "id": 169,
-    "name": "Estádio Abdoulaye Wade",
-    "capacity": 42000,
-    "country": "Senegal",
+    "name": "Aluízio Pimenta",
+    "capacity": 24000,
+    "country": "Brasil",
     "clubId": 169
   },
   {
     "id": 170,
-    "name": "Estádio Moshood Abiola",
-    "capacity": 25000,
-    "country": "Nigéria",
+    "name": "José Maria de Campos Maia",
+    "capacity": 36000,
+    "country": "Brasil",
     "clubId": 170
   },
   {
     "id": 171,
-    "name": "Estádio Baba Yara",
-    "capacity": 55000,
-    "country": "Gana",
+    "name": "Raulino de Oliveira",
+    "capacity": 65000,
+    "country": "Brasil",
     "clubId": 171
   },
   {
     "id": 172,
-    "name": "Estádio Nacional do Japão",
-    "capacity": 49000,
-    "country": "Japão",
+    "name": "Augusto Bauer",
+    "capacity": 50000,
+    "country": "Brasil",
     "clubId": 172
   },
   {
     "id": 173,
-    "name": "Estádio Mundialista de Seul",
-    "capacity": 57000,
-    "country": "Coreia do Sul",
+    "name": "Baenão",
+    "capacity": 71000,
+    "country": "Brasil",
     "clubId": 173
   },
   {
     "id": 174,
-    "name": "Stadium Australia",
-    "capacity": 33000,
-    "country": "Austrália",
+    "name": "Aflitos",
+    "capacity": 35000,
+    "country": "Brasil",
     "clubId": 174
   },
   {
     "id": 175,
-    "name": "BMO Field",
-    "capacity": 46000,
-    "country": "Canadá",
+    "name": "Frasqueirão",
+    "capacity": 28000,
+    "country": "Brasil",
     "clubId": 175
   },
   {
     "id": 176,
-    "name": "Parken Stadium",
-    "capacity": 43000,
-    "country": "Dinamarca",
+    "name": "Batistão",
+    "capacity": 54000,
+    "country": "Brasil",
     "clubId": 176
+  },
+  {
+    "id": 177,
+    "name": "Rei Pelé",
+    "capacity": 43000,
+    "country": "Brasil",
+    "clubId": 177
+  },
+  {
+    "id": 178,
+    "name": "Fonte Luminosa",
+    "capacity": 46000,
+    "country": "Brasil",
+    "clubId": 178
+  },
+  {
+    "id": 179,
+    "name": "1º de Maio",
+    "capacity": 16000,
+    "country": "Brasil",
+    "clubId": 179
+  },
+  {
+    "id": 180,
+    "name": "Almeidão",
+    "capacity": 69000,
+    "country": "Brasil",
+    "clubId": 180
+  },
+  {
+    "id": 181,
+    "name": "Elzir Cabral",
+    "capacity": 63000,
+    "country": "Brasil",
+    "clubId": 181
+  },
+  {
+    "id": 182,
+    "name": "Soares de Barros",
+    "capacity": 21000,
+    "country": "Brasil",
+    "clubId": 182
+  },
+  {
+    "id": 183,
+    "name": "Colosso da Lagoa",
+    "capacity": 85000,
+    "country": "Brasil",
+    "clubId": 183
+  },
+  {
+    "id": 184,
+    "name": "Centenário",
+    "capacity": 59000,
+    "country": "Brasil",
+    "clubId": 184
+  },
+  {
+    "id": 185,
+    "name": "Passo D'Areia",
+    "capacity": 84000,
+    "country": "Brasil",
+    "clubId": 185
+  },
+  {
+    "id": 186,
+    "name": "Jonas Duarte",
+    "capacity": 82000,
+    "country": "Brasil",
+    "clubId": 186
+  },
+  {
+    "id": 187,
+    "name": "Willie Davids",
+    "capacity": 83000,
+    "country": "Brasil",
+    "clubId": 187
+  },
+  {
+    "id": 188,
+    "name": "Walter Sampaio",
+    "capacity": 25000,
+    "country": "Brasil",
+    "clubId": 188
+  },
+  {
+    "id": 189,
+    "name": "Castelão do Maranhão",
+    "capacity": 62000,
+    "country": "Brasil",
+    "clubId": 189
+  },
+  {
+    "id": 190,
+    "name": "Etelvino Mendonça",
+    "capacity": 37000,
+    "country": "Brasil",
+    "clubId": 190
+  },
+  {
+    "id": 191,
+    "name": "Estádio do Retrô",
+    "capacity": 60000,
+    "country": "Brasil",
+    "clubId": 191
+  },
+  {
+    "id": 192,
+    "name": "Assis Chateaubriand",
+    "capacity": 59000,
+    "country": "Brasil",
+    "clubId": 192
+  },
+  {
+    "id": 193,
+    "name": "Arena da Amazônia",
+    "capacity": 66000,
+    "country": "Brasil",
+    "clubId": 193
+  },
+  {
+    "id": 194,
+    "name": "Estádio Assis Brasil",
+    "capacity": 67000,
+    "country": "Brasil",
+    "clubId": 194
+  },
+  {
+    "id": 195,
+    "name": "Luiz Gonzaga de Barros Melo",
+    "capacity": 57000,
+    "country": "Brasil",
+    "clubId": 195
+  },
+  {
+    "id": 196,
+    "name": "Presidente Vargas",
+    "capacity": 43000,
+    "country": "Brasil",
+    "clubId": 196
+  },
+  {
+    "id": 197,
+    "name": "Marizão",
+    "capacity": 70000,
+    "country": "Brasil",
+    "clubId": 197
+  },
+  {
+    "id": 198,
+    "name": "Waldemar Wanderley",
+    "capacity": 78000,
+    "country": "Brasil",
+    "clubId": 198
+  },
+  {
+    "id": 199,
+    "name": "Rançoli",
+    "capacity": 57000,
+    "country": "Brasil",
+    "clubId": 199
+  },
+  {
+    "id": 200,
+    "name": "Vale do Alecrim",
+    "capacity": 66000,
+    "country": "Brasil",
+    "clubId": 200
+  },
+  {
+    "id": 201,
+    "name": "Bento de Abreu",
+    "capacity": 59000,
+    "country": "Brasil",
+    "clubId": 201
+  },
+  {
+    "id": 202,
+    "name": "Arena da Floresta",
+    "capacity": 77000,
+    "country": "Brasil",
+    "clubId": 202
+  },
+  {
+    "id": 203,
+    "name": "Zerão",
+    "capacity": 65000,
+    "country": "Brasil",
+    "clubId": 203
+  },
+  {
+    "id": 204,
+    "name": "Arruda",
+    "capacity": 66000,
+    "country": "Brasil",
+    "clubId": 204
+  },
+  {
+    "id": 205,
+    "name": "Canarinho",
+    "capacity": 13000,
+    "country": "Brasil",
+    "clubId": 205
+  },
+  {
+    "id": 206,
+    "name": "Aluízio Ferreira",
+    "capacity": 24000,
+    "country": "Brasil",
+    "clubId": 206
+  },
+  {
+    "id": 207,
+    "name": "Adauto Moraes",
+    "capacity": 45000,
+    "country": "Brasil",
+    "clubId": 207
+  },
+  {
+    "id": 208,
+    "name": "Estádio Estrela do Sertão",
+    "capacity": 17000,
+    "country": "Brasil",
+    "clubId": 208
+  },
+  {
+    "id": 209,
+    "name": "Maracanã",
+    "capacity": 63000,
+    "country": "Brasil",
+    "clubId": 209
+  },
+  {
+    "id": 210,
+    "name": "Estadio Monumental",
+    "capacity": 58000,
+    "country": "Argentina",
+    "clubId": 210
+  },
+  {
+    "id": 211,
+    "name": "Stade de France",
+    "capacity": 59000,
+    "country": "França",
+    "clubId": 211
+  },
+  {
+    "id": 212,
+    "name": "Wembley Stadium",
+    "capacity": 74000,
+    "country": "Inglaterra",
+    "clubId": 212
+  },
+  {
+    "id": 213,
+    "name": "Santiago Bernabéu",
+    "capacity": 22000,
+    "country": "Espanha",
+    "clubId": 213
+  },
+  {
+    "id": 214,
+    "name": "Allianz Arena",
+    "capacity": 26000,
+    "country": "Alemanha",
+    "clubId": 214
+  },
+  {
+    "id": 215,
+    "name": "Estádio da Luz",
+    "capacity": 74000,
+    "country": "Portugal",
+    "clubId": 215
+  },
+  {
+    "id": 216,
+    "name": "Stadio Olímpico",
+    "capacity": 68000,
+    "country": "Itália",
+    "clubId": 216
+  },
+  {
+    "id": 217,
+    "name": "Johan Cruyff Arena",
+    "capacity": 25000,
+    "country": "Holanda",
+    "clubId": 217
+  },
+  {
+    "id": 218,
+    "name": "Estádio Rei Balduíno",
+    "capacity": 52000,
+    "country": "Bélgica",
+    "clubId": 218
+  },
+  {
+    "id": 219,
+    "name": "Estádio Maksimir",
+    "capacity": 34000,
+    "country": "Croácia",
+    "clubId": 219
+  },
+  {
+    "id": 220,
+    "name": "Estádio Centenário",
+    "capacity": 59000,
+    "country": "Uruguai",
+    "clubId": 220
+  },
+  {
+    "id": 221,
+    "name": "Estádio Metropolitano",
+    "capacity": 13000,
+    "country": "Colômbia",
+    "clubId": 221
+  },
+  {
+    "id": 222,
+    "name": "Estádio Azteca",
+    "capacity": 15000,
+    "country": "México",
+    "clubId": 222
+  },
+  {
+    "id": 223,
+    "name": "Estádio Azteca",
+    "capacity": 18000,
+    "country": "Estados Unidos",
+    "clubId": 223
+  },
+  {
+    "id": 224,
+    "name": "Estádio Mohammed V",
+    "capacity": 35000,
+    "country": "Marrocos",
+    "clubId": 224
+  },
+  {
+    "id": 225,
+    "name": "Estádio Abdoulaye Wade",
+    "capacity": 27000,
+    "country": "Senegal",
+    "clubId": 225
+  },
+  {
+    "id": 226,
+    "name": "Estádio Moshood Abiola",
+    "capacity": 74000,
+    "country": "Nigéria",
+    "clubId": 226
+  },
+  {
+    "id": 227,
+    "name": "Estádio Baba Yara",
+    "capacity": 73000,
+    "country": "Gana",
+    "clubId": 227
+  },
+  {
+    "id": 228,
+    "name": "Estádio Nacional do Japão",
+    "capacity": 60000,
+    "country": "Japão",
+    "clubId": 228
+  },
+  {
+    "id": 229,
+    "name": "Estádio Mundialista de Seul",
+    "capacity": 36000,
+    "country": "Coreia do Sul",
+    "clubId": 229
+  },
+  {
+    "id": 230,
+    "name": "Stadium Australia",
+    "capacity": 31000,
+    "country": "Austrália",
+    "clubId": 230
+  },
+  {
+    "id": 231,
+    "name": "BMO Field",
+    "capacity": 61000,
+    "country": "Canadá",
+    "clubId": 231
+  },
+  {
+    "id": 232,
+    "name": "Parken Stadium",
+    "capacity": 29000,
+    "country": "Dinamarca",
+    "clubId": 232
   }
 ]

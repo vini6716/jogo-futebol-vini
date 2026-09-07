@@ -32,18 +32,30 @@ inteira em qualquer hospedagem estática (GitHub Pages, Netlify, Vercel).
   escudo e força do elenco); o jogo gera automaticamente um elenco de 16
   jogadores. Fica salvo no navegador e passa a aparecer no Jogo Rápido e
   na Carreira.
-- **Modo Carreira** — escolha um clube, jogue uma temporada completa
-  (turno e returno contra os demais clubes), acompanhe a tabela de
-  classificação, o histórico de rodadas e as taças conquistadas.
-  Progresso salvo automaticamente.
+- **Modo Carreira** — escolha um clube e o campeonato:
+  - **Liga** — turno e returno contra os demais clubes da mesma liga do
+    clube escolhido (ou, pra clubes sem liga — como os criados em "Crie seu
+    Clube" — a liguinha **Mundo Livre**), com tabela de classificação.
+  - **Copas** (mata-mata, com chaveamento e "byes" quando o número de times
+    não é potência de 2): **Copa do Brasil** (clubes das 4 divisões),
+    **Copa Libertadores** (clubes do Brasileirão Série A), **Mundial de
+    Clubes** (clubes das principais ligas do mundo) e **Mundo Livre**
+    (qualquer clube, inclusive os criados por você).
+  - **Copa do Mundo FIFA** — fase de grupos (4 grupos de 6 seleções) +
+    mata-mata com os 2 primeiros de cada grupo, jogada com as 24 seleções
+    nacionais.
+
+  Acompanhe a tabela/grupos, o chaveamento, o histórico de rodadas e as
+  taças conquistadas (campeão, vice ou fase em que foi eliminado). Progresso
+  salvo automaticamente.
 - **Configurações** — volume de música/efeitos e dificuldade (Iniciante,
   Amador, Semiprofissional, Profissional, Lenda), que ajusta o quanto o
   motor de partida favorece o seu time.
 - **Banco de dados real** — clubes e seleções de verdade: as principais
   ligas do mundo (Premier League, La Liga, Serie A, Bundesliga, Ligue 1,
-  Brasileirão Série A, Liga Portugal, Eredivisie — 152 clubes no total) mais
-  24 seleções nacionais, com estádios reais e ~600 jogadores reais
-  conhecidos (astros e titulares) espalhados pelos elencos. O restante de
+  Brasileirão Séries A/B/C/D, Liga Portugal, Eredivisie — 208 clubes no
+  total) mais 24 seleções nacionais, com estádios reais e ~600 jogadores
+  reais conhecidos (astros e titulares) espalhados pelos elencos. O restante de
   cada elenco (até completar 16-17 jogadores por time) é preenchido com
   reservas gerados com nomes plausíveis pra nacionalidade do clube, pra
   ninguém ficar sem escalação. Tudo em `/database/*.json`, gerado por

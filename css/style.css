@@ -504,6 +504,69 @@ select {
   font-size: 0.9rem;
 }
 
+.career-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.career-group h4 {
+  margin: 0 0 0.2rem;
+  color: var(--gold);
+}
+.standings-table-compact th, .standings-table-compact td {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.8rem;
+}
+.standings-table-compact tr.is-qualifying {
+  background: rgba(46, 204, 113, 0.08);
+}
+
+.career-bracket {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.bracket-round {
+  min-width: 220px;
+  flex: 0 0 auto;
+}
+.bracket-round h4 {
+  margin: 0 0 0.5rem;
+  color: var(--gold);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+.bracket-tie {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--panel-solid);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.55rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+.bracket-tie.is-user {
+  border-color: var(--accent);
+}
+.bracket-tie span:first-child {
+  text-align: right;
+}
+.bracket-tie .is-winner {
+  color: var(--accent);
+  font-weight: 700;
+}
+.bracket-score {
+  color: var(--ink-dim);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
 /* ===================== SETTINGS ===================== */
 .setting-row {
   margin-bottom: 1.25rem;
