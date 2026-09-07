@@ -19,7 +19,16 @@ function resizeCanvas() {
   canvas.height = Math.round(rect.height * dpr);
 }
 window.addEventListener("resize", resizeCanvas);
+window.addEventListener("orientationchange", () => setTimeout(resizeCanvas, 200));
 resizeCanvas();
+
+// Em celular na vertical, o CSS mostra o aviso pra girar e esconde o jogo.
+// Aqui a gente só garante que o relógio/física não correm enquanto isso.
+const portraitQuery = window.matchMedia("(orientation: portrait) and (max-width: 900px)");
+portraitQuery.addEventListener("change", (e) => {
+  if (game) game.paused = e.matches;
+  resizeCanvas();
+});
 
 function formatClock(seconds) {
   const s = Math.max(0, Math.ceil(seconds));
@@ -52,6 +61,7 @@ function newGame() {
   attachJoystick(game, document.getElementById("joy-base"), document.getElementById("joy-knob"));
   attachKickButton(game, document.getElementById("kick-btn"));
 
+  game.paused = portraitQuery.matches;
   game.start();
 
   const tick = () => {
